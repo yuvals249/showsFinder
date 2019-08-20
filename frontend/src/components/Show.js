@@ -6,12 +6,11 @@ class Show extends Component {
             <div className='showContainer'>
 
              <img  src='https://media.pitchfork.com/photos/5cd2e98393a536660f1ed572/2:1/w_790/Led-Zeppelin.jpg' class='picContainer'></img>
-
-            <div className='infoBar'>   
-                <span className='showTitle'>Led Zepplin</span>
-                <span className='showDate'>12.09.2022</span>
-                <span className='showLoc'>Tel-Aviv</span>
-                <div className='showPriceBuyNow'>500 NIS <br></br>Buy Now</div>
+            <div class='infoBar'>   
+                <span class='showTitle'>{this.props.show.name}</span>
+                <span class='showDate'>{this.props.show.date}</span>
+                <span class='showLoc'>{this.props.show.address}</span>
+                <div class='showPriceBuyNow'>{this.props.show.currentPrice} <i class="fas fa-shekel-sign"></i> <br></br> {this.props.show.amountLeftPretty} <br></br>Buy Now</div>
                 </div>
             </div>
         )

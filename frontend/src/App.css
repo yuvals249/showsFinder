@@ -8,10 +8,10 @@
   grid-template-rows: 1.3fr 0.7fr;
   grid-template-areas: "picContainer" "infoBar";
   grid-area: showContainer;
-  margin-top: 0.5vw;
+  margin-bottom: 35vh;
   width: 20vw;
   height: 10vh;
-  border-radius: 1vw;
+  border-radius: 1vw; 
 }
 
 .picContainer { grid-area: picContainer;
@@ -90,4 +90,7 @@
   padding-right: 2vh;
  } 
  
-
+.filters{
+  transition-duration: 1s;
+  
+}
