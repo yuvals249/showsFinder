@@ -20,7 +20,7 @@ class Show extends Component {
                 <div onClick={this.showinfo} class='showPriceBuyNow'>{this.props.show.currentPrice} <i class="fas fa-shekel-sign"></i> <br></br> {this.props.show.amountLeftPretty} <br></br>Buy Now</div>
                 </Link>
                 </div>
-            </div>
+            </center>
         )
     }
 }

@@ -1,4 +1,5 @@
-import { observable,  action } from  'mobx'
+import { observable, action } from 'mobx'
+
 
 export class DataStore{
     @observable shows=[]
@@ -7,8 +8,11 @@ export class DataStore{
     @action updateStore=(data)=>{
         this.showsfilter=data
     }
-    @action getdata=(data)=>{
-        this.shows=data
+    @action getdata = (data) => {
+        this.shows = data
+    }
+    @action updateShowInfo = (data) => {
+        this.showInfo = data
     }
     @action getinfo=(data)=>{
         this.showinfo=data

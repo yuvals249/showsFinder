@@ -8,11 +8,10 @@ class ShowPage extends Component {
         super()
     }
 
-    
-
     render() {
         let youtubeVideoId = 'https://www.youtube.com/embed/' + this.props.show.youtubeVideoId
         let show = this.props.show
+        console.log(this.props.show)
         return (
             <div>
                 <div>{show.name}</div>
