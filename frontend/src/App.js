@@ -3,7 +3,7 @@ import './App.css';
 import { observer, inject } from 'mobx-react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios'
-import Shows from './components/Shows'
+import Show from './components/Show'
 import Search from './components/search'
 import ShowPage from './components/ShowPage';
 
@@ -20,8 +20,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.Datastore.shows)
-    console.log(this.props.Datastore.showInfo)
+   
     return (
       <Router>
       <div className="App">
