@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Filters from './Component/Filters'
 import { observer, inject } from 'mobx-react'
 import axios from 'axios'
+
 @inject("FilterStore","DataStore")
 
 @observer
@@ -15,6 +16,7 @@ class Search extends Component{
     handlefilters = (e) => {
         this.props.FilterStore.handlefilters(e.target.name, e.target.value)
     }
+
     filters(){
         this.setState({
             filters:true
@@ -27,6 +29,7 @@ class Search extends Component{
             location: this.props.FilterStore.location,
             date: this.props.FilterStore.date
         }
+
         let data=await axios.post(`http://localhost:8080/filter`,filters)
         this.props.DataStore.updateStore(data)
     }

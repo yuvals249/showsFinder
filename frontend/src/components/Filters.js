@@ -4,7 +4,6 @@ import { observer, inject } from 'mobx-react'
 import axios from 'axios'
 @inject("Filterstore","Datastore")
 
-
 @observer
 class Filters extends Component {
     handlefilters = (e) => {
