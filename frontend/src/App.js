@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios'
 import Show from './components/Show'
 import Search from './components/search'
-import { tsMethodSignature } from '@babel/types';
+import ShowPage from './components/ShowPage';
 
 
 @inject("Filterstore","Datastore")
@@ -23,8 +23,10 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-      <Search />
-     {this.props.Datastore.showsfilter.filter(n=>n.name.includes(this.props.Filterstore.name)).map(s=><Show show={s}/>)}
+        <div><Link to="/">Home</Link></div>
+      <Route exact path="/" component={Search}/>
+     {this.props.Datastore.showsfilter.filter(n=>n.name.includes(this.props.Filterstore.name)).map(s=> <Route exact path="/" render={() =>   <Show show={s}/> }/>)}
+     <Route path="/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />}/>
       </div>
       </Router>
     );
