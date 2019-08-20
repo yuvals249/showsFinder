@@ -39,15 +39,17 @@ class Filters extends Component {
     render() {
        
         return (
-            <div className='filters'>
-                <div>{this.props.Filterstore.cost}</div>
-                <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} />
+            <div>
+                <div className='filterNum'>{this.props.Filterstore.cost}</div>
+                <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='scroller'/>
+
+                <br></br>
                 
-                <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} >
+                <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} className='dropFilter' >
                     <option value='all'>all</option>
                     {this.locations().map(l=><option key={l} value={l}>{l}</option>)}
                 </select>
-                <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} >
+                <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} className='dropFilter'>
                    <option value='all'>all</option>
 
                    <option value='today'>today</option>
