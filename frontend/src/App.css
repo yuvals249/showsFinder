@@ -1,24 +1,26 @@
 .App {
-  font-family: Montserrat;
+  font-family: Arimo;
+  text-align: center;
+  background-color: #ecf0f1;
 }
 
 .showContainer {
+  margin-top: 2vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1.3fr 0.7fr;
   grid-template-areas: "picContainer" "infoBar";
   grid-area: showContainer;
-  margin-bottom: 35vh;
-  width: 20vw;
-  height: 10vh;
-  border-radius: 1vw; 
+  width: 90vw;
+  padding-top: 5vw;
 }
 
-.picContainer { grid-area: picContainer;
-  width:30vw;
+.picContainer {
+  grid-area: picContainer;
+  width:90vw;
   border: 0.5px solid black;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  height: 30vw;
+  margin-top: 10vw;
 }
 
 .infoBar {
@@ -31,10 +33,10 @@
   "showPrice quickBuy showLoc";
   grid-area: infoBar;
   background-color: grey;
-  width: 30vw;
   border: 0.5px solid black;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  height: 7vw;
 }
 
 .showPriceBuyNow { 
@@ -43,14 +45,13 @@
   font-size: 1.5vw;
   background-color: #077C91;
   border: 0.2vw solid #150760;
-  width: 10vw;
-  text-align: center;
-  grid-gap: 0ch;
+  width: 15vw;
   border: 0.5px solid black;
   border-bottom-left-radius: 25px;
   text-align: center;
   cursor: pointer;
   display: block;
+  margin-right: 100%;
 }
 
 .showPriceBuyNow:hover {
@@ -66,18 +67,18 @@
   grid-area: showTitle;  
   text-align: right;
   font-weight: bold;
-  font-size: 1.3vw; 
+  font-size: 2vw; 
   color:white; 
-  padding-right: 1vh;
+  padding-right: 1vw;
 }
 
 .showDate { 
   grid-area: showDate; 
   text-align: right;
   font-weight: bold;
-  font-size: 1.1vw; 
+  font-size: 1.5vw; 
   color:white;  
-  padding-right: 1vh;
+  padding-right: 1vw;
 
 }
 
@@ -85,12 +86,94 @@
   grid-area: showLoc;  
   text-align: right;
   font-weight: bold;
-  font-size: 1vw;   
+  font-size: 1.3vw;   
   color:white;
-  padding-right: 2vh;
+  padding-right: 1vw;
  } 
- 
-.filters{
-  transition-duration: 1s;
-  
+
+
+
+
+.upDown {
+  position: absolute;
+  margin-left: 94vw;
+}
+
+.fa-arrow-down {
+  width: 5vw;
+  height: 4.5vw;
+  background-color:#37819B;
+  font-size: 4.5vw;
+  color:white;
+  cursor: pointer;
+}
+
+.fa-arrow-down:hover {
+  background-color:rgb(68, 162, 196);
+  transition: 0.3s;
+}
+
+.fa-arrow-down:active {
+  background-color:#37819B;
+}
+
+.fa-arrow-up {
+  width: 5vw;
+  height: 4.5vw;
+  background-color:#37819B;
+  font-size: 4.5vw;
+  color:white;
+  cursor: pointer;
+  position: absolute;
+}
+
+.fa-arrow-up:hover {
+  background-color:rgb(68, 162, 196);
+  transition: 0.3s;
+}
+
+.fa-arrow-up:active {
+  background-color:#37819B;
+}
+.search {
+  width: 99vw;
+  height: 4.5vw;
+  border: none;
+  background-color: #37819B;
+  font-size: 2vw;
+  color: white;
+  font-family: Arimo;
+  position: absolute;
+}
+
+::-webkit-input-placeholder  {
+  color: white;
+}
+
+.dropFilter {
+  width: 45%;
+  background-color: #37819B;
+  border: none;
+  margin-left: 1vw;
+}
+
+.scroller {
+  width: 70vw;
+}
+
+.filterNum {
+  font-size: 2.5vw;
+}
+
+.filterBox {
+  background-color: rgb(43, 101, 122);
+  width: 100vw;
+  height: 10vw;
+  position: absolute;
+  margin-top: 4.5vw;
+}
+
+.fixedMenu {
+  position: fixed;
+  background-color: black;
 }

@@ -18,11 +18,11 @@ class Show extends Component {
         return (
             <center>
                 <div className='showContainer'>
-                    <img src='https://media.pitchfork.com/photos/5cd2e98393a536660f1ed572/2:1/w_790/Led-Zeppelin.jpg' class='picContainer'></img>
-                    <div class='infoBar'>
-                        <span class='showTitle'>{this.props.show.name}</span>
-                        <span class='showDate'>{this.props.show.date}</span>
-                        <span class='showLoc'>{this.props.show.address}</span>
+                    <img src='https://i.ytimg.com/vi/8TfywEx5kmo/maxresdefault.jpg' className='picContainer'></img>
+                    <div className='infoBar'>
+                        <span className='showTitle'>{this.props.show.name}</span>
+                        <span className='showDate'>{this.props.show.date}</span>
+                        <span className='showLoc'>{this.props.show.address}</span>
                         <div className='showPriceBuyNow'>{this.props.show.currentPrice} <i class="fas fa-shekel-sign"></i> <br></br> {this.props.show.amountLeftPretty} <br></br>Buy Now</div>
                         <Link to="/showPage"><div className='showPriceBuyNow' onClick={this.updateShowInfo}>{this.props.show.currentPrice} <i class="fas fa-shekel-sign"></i> <br></br> {this.props.show.amountLeftPretty} <br></br>Buy Now</div></Link>
                     </div>
