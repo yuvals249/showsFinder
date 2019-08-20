@@ -16,7 +16,6 @@
 
 .picContainer { grid-area: picContainer;
   width:30vw;
-  height: 30vh; 
   border: 0.5px solid black;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -33,7 +32,6 @@
   grid-area: infoBar;
   background-color: grey;
   width: 30vw;
-  height: 10vh;
   border: 0.5px solid black;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -58,6 +56,10 @@
 .showPriceBuyNow:hover {
   background-color: rgb(11, 156, 182);
   transition: 0.3s;
+}
+
+.showPriceBuyNow:active {
+  background-color: #077C91;
 }
 
 .showTitle { 

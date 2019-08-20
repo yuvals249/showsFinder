@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
+
 import axios from 'axios'
 @inject("Filterstore","Datastore")
+
 
 @observer
 class Filters extends Component {
     handlefilters = (e) => {
+
         this.props.Filterstore.handlefilters(e.target.name, e.target.value)
         this.search()
     }
@@ -46,6 +49,7 @@ class Filters extends Component {
                 </select>
                 <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} >
                    <option value='all'>all</option>
+
                    <option value='today'>today</option>
                    <option value='tomorrow'>tomorrow</option>
                    <option value='weekend'>this weekend</option>
