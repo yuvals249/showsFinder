@@ -21,16 +21,18 @@ class Search extends Component{
         })
     }
     
-
     render(){
         return(
+            <center >
+                <div className='fixedMenu'>
             <div>
-                <input placeholder='search'  name='name' type='text' onChange={this.handlefilters} />
-               {this.state.filters ? <Filters  /> : null}
-                <i className={this.state.filters ? "fas fa-arrow-up":"fas fa-arrow-down"} onClick={this.filters}></i>
-            </div>
+                <input placeholder='Search'  name='name' type='text' onChange={this.handlefilters} className='search' />
+                <span className='upDown'><i className={this.state.filters ? "fas fa-arrow-up":"fas fa-arrow-down"} onClick={this.filters}></i></span>
+               {this.state.filters ? <div className='filterBox'><Filters  /></div> : null}</div>
+
+               </div>
+               </center>
         )
     }
 }
-
 export default Search
