@@ -198,8 +198,6 @@
   height: 10vw;
   position: absolute;
   margin-top: 4.5vw;
-  border-bottom-left-radius: 5vw;
-  border-bottom-right-radius: 5vw;
 }
 
 .fixedMenu {
@@ -207,4 +205,69 @@
   background-color: black;
   top: 0;
   z-index: 1500;
+}
+
+
+
+
+
+.showPageContainer {
+  background-color: #D6D6D6;
+}
+
+.showNamePage{
+  text-align: right;
+}
+
+.showDatePage{
+  text-align: right;
+}
+
+.showAdressPage{
+  text-align: right;
+}
+
+.showDescPage{
+  text-align: right;
+}
+
+.showPricePage{
+  text-align: right;
+
+}
+
+.youtubeBoxPage{
+    width: 100%;
+    height: 40vw;
+}
+
+.paypalPayBoxPage{
+}
+
+.backButton{
+}
+
+.fa-star {
+  color: #37819B;
+}
+
+.fa-calendar-alt{
+  color: #37819B;
+}
+
+.fa-map-marked-alt{
+  color: #37819B;
+}
+
+.fa-ticket-alt{
+  color: #37819B;
+}
+
+.fa-undo-alt{
+  width: 5vw;
+  height: 5vw;
+  background-color: #686868; 
+  color: #C9C9C9;
+  font-size: 4vw;
+  padding-top: 1vw;
 }
