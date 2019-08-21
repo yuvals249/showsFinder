@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { observer, inject } from 'mobx-react'
@@ -27,3 +28,5 @@ class Show extends Component {
 }
 
 export default Show
+
+
