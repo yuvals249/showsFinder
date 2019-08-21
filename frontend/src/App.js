@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <div><Link to="/">Home</Link></div>
+        <div><Link to="/"><i className="fab fa-accessible-icon"></i></Link></div>
       <Route exact path="/" component={Search}/>
      {this.props.Datastore.showsfilter.filter(n=>n.name.includes(this.props.Filterstore.name)).map(s=> <Route exact path="/" render={() =>   <Show show={s}/> }/>)}
      <Route path="/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />}/>
