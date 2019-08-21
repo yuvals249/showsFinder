@@ -18,90 +18,77 @@
 .picContainer {
   grid-area: picContainer;
   width:90vw;
-  border: 0.5px solid black;
-  height: 30vw;
+  height: 25vw;
   margin-top: 10vw;
 }
-
-.infoBar * { 
-  border: 1px solid red;
-  position: relative;
- }
- 
- .infoBar *:after { 
-  position: absolute;
-  top: 0;
-  left: 0;
- }
-
-.infoBar {
-  display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "showPriceBuyNow showTitle" 
-  "showPriceBuyNow showDate" 
-  "showPriceBuyNow showLoc";
-  grid-area: infoBar;
-  background-color: grey;
-  border: 0.5px solid black;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  height: 7vw;
   
-}
 
-.showPriceBuyNow { 
-  grid-area: showPrice; 
-  /* font-weight: bold;
-  font-size: 1.5vw;
-  background-color: #077C91;
-  border: 0.2vw solid #150760;
-  width: 15vw;
-  height: 7vw;
-  border: 0.5px solid black;
-  border-bottom-left-radius: 25px;
-  text-align: center;
-  cursor: pointer;
-  margin-right: 100%; */
-}
 
-.showPriceBuyNow:hover {
-  background-color: rgb(11, 156, 182);
-  transition: 0.3s;
-}
+  .infoBar {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "showPriceBuyNow showTitle" 
+    "showPriceBuyNow showDate" 
+    "showPriceBuyNow showLoc";
+    grid-area: infoBar;
+    background-color: #D3D3D3;
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    height: 6vw;
+    
+  }
 
-.showPriceBuyNow:active {
-  background-color: #077C91;
-}
+  .showPriceBuyNow { 
+    grid-area: showPrice; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    background-color: #077C91;
+    color: white;
+    width: 15vw;
+    height: 6vw;
+    border-bottom-left-radius: 5vw;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 100%;
+    z-index: 1000;
+    position: absolute;
+  }
 
-.showTitle { 
-  grid-area: showTitle;  
-  text-align: right;
-  font-weight: bold;
-  /* font-size: 2vw;  */
-  color:white; 
-  padding-right: 1vw;
+  .showPriceBuyNow:hover {
+    background-color: rgb(11, 156, 182);
+    transition: 0.3s;
+  }
 
-}
+  .showPriceBuyNow:active {
+    background-color: #077C91;
+  }
 
-.showDate { 
-  grid-area: showDate; 
-  text-align: right;
-  font-weight: bold;
-  font-size: 1.5vw; 
-  color:white;  
-  padding-right: 1vw;
-}
+  .showTitle { 
+    grid-area: showTitle;  
+    text-align: right;
+    font-weight: bold;
+    font-size: 2vw; 
+    padding-right: 1vw;
 
-.showLoc { 
-  grid-area: showLoc;  
-  text-align: right;
-  font-weight: bold;
-  font-size: 1.3vw;   
-  color:white;
-  padding-right: 1vw;
- } 
+  }
+
+  .showDate { 
+    grid-area: showDate; 
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5vw; 
+    padding-right: 1vw;
+  }
+
+  .showLoc { 
+    grid-area: showLoc;  
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.3vw;   
+    padding-right: 2vw;
+  } 
 
 
 
@@ -111,7 +98,7 @@
   margin-left: 94vw;
 }
 
-.fa-arrow-down {
+.fa-chevron-down {
   width: 5vw;
   height: 4.5vw;
   background-color:#37819B;
@@ -120,16 +107,16 @@
   cursor: pointer;
 }
 
-.fa-arrow-down:hover {
+.fa-chevron-down:hover {
   background-color:rgb(68, 162, 196);
   transition: 0.3s;
 }
 
-.fa-arrow-down:active {
+.fa-chevron-down:active {
   background-color:#37819B;
 }
 
-.fa-arrow-up {
+.fa-chevron-up {
   width: 5vw;
   height: 4.5vw;
   background-color:#37819B;
@@ -139,17 +126,17 @@
   position: absolute;
 }
 
-.fa-arrow-up:hover {
+.fa-chevron-up:hover {
   background-color:rgb(68, 162, 196);
   transition: 0.3s;
 }
 
-.fa-arrow-up:active {
+.fa-chevron-up:active {
   background-color:#37819B;
 }
 
 .search {
-  width: 99vw;
+  width: 100vw;
   height: 4.5vw;
   border: none;
   background-color: #37819B;
@@ -165,14 +152,41 @@
 }
 
 .dropFilter {
-  width: 45%;
+  width: 25vw;
+  height: 2vw;
   background-color: #37819B;
   border: none;
   margin-left: 1vw;
+  font-size: 2vw;
+
 }
 
-.scroller {
-  width: 70vw;
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 0px;
+  width: 90%; 
+  height: 1vw;
+  border-radius: 5vw; 
+  background: #F2F2F2; 
+  outline: none; 
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1; 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 2vw; 
+  height: 2vw; 
+  border-radius: 20vw;
+  background: #CECECE; 
+  cursor: pointer; 
 }
 
 .filterNum {
@@ -185,10 +199,13 @@
   height: 10vw;
   position: absolute;
   margin-top: 4.5vw;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
 }
 
 .fixedMenu {
   position: fixed;
   background-color: black;
-  margin-top: 0;
+  top: 0;
+  z-index: 1500;
 }

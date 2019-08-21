@@ -27,7 +27,7 @@ class Search extends Component{
                 <div className='fixedMenu'>
           
                 <input placeholder='Search'  name='name' type='text' onChange={this.handlefilters} className='search' />
-                <span className='upDown'><i className={this.state.filters ? "fas fa-arrow-up":"fas fa-arrow-down"} onClick={this.filters}></i></span>
+                <span className='upDown'><i className={this.state.filters ? "fas fa-chevron-up":"fas fa-chevron-down"} onClick={this.filters}></i></span>
                {this.state.filters ? <div id='filterBox' ><Filters  /></div> : null}
 
                </div>
