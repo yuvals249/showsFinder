@@ -8,7 +8,7 @@ class Search extends Component{
     constructor(){
         super()
         this.state={
-            filters:false
+            filters:false,
         }
     }
     handlefilters = (e) => {
@@ -25,10 +25,10 @@ class Search extends Component{
         return(
             <center >
                 <div className='fixedMenu'>
-            <div>
+          
                 <input placeholder='Search'  name='name' type='text' onChange={this.handlefilters} className='search' />
                 <span className='upDown'><i className={this.state.filters ? "fas fa-arrow-up":"fas fa-arrow-down"} onClick={this.filters}></i></span>
-               {this.state.filters ? <div className='filterBox'><Filters  /></div> : null}</div>
+               {this.state.filters ? <div id='filterBox' ><Filters  /></div> : null}
 
                </div>
                </center>
