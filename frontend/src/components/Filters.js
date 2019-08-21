@@ -14,7 +14,7 @@ class Filters extends Component {
 
     locations(){
         let obj={}
-      let arr = this.props.Datastore.shows.map(l=>l.locations.slice(1))
+      let arr = this.props.Datastore.shows.map(l=>l.locations.slice(-1))
       
         for (let l of arr){
             obj[l]=l
@@ -46,14 +46,14 @@ class Filters extends Component {
                 
                 <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} className='dropFilter' >
                     <option value='all'>all</option>
-                    {this.locations().map(l=><option key={l} value={l}>{l}</option>)}
+                    {this.locations().map(l=><option key={l} value={l}>{l.charAt(0).toUpperCase()}{l.slice(1).toLowerCase()}</option>)}
                 </select>
                 <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} className='dropFilter'>
-                   <option value='all'>all</option>
+                   <option value='all'>All</option>
 
-                   <option value='today'>today</option>
-                   <option value='tomorrow'>tomorrow</option>
-                   <option value='weekend'>this weekend</option>
+                   <option value='today'>Today</option>
+                   <option value='tomorrow'>Tomorrow</option>
+                   <option value='weekend'>This weekend</option>
                 </select>
             </div>
         )
