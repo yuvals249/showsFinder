@@ -40,7 +40,7 @@ class Filters extends Component {
         return (
             <div>
                 <div className='filterNum'>{this.props.Filterstore.cost}</div>
-                <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='scroller'/>
+                <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='slider'/>
 
                 <br></br>
                 
