@@ -19,7 +19,7 @@ class ShowPage extends Component {
                 <div>{show.address}</div>
                 <p>{show.description}</p>
                 <iframe width="560" height="315" src={youtubeVideoId} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <PaypalExpressBtn client={client} currency={'USD'} total={1.00} />
+                <PaypalExpressBtn client={client} currency={'USD'} total={show.currentPrice} />
             </div>
         )
     }
