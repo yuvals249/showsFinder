@@ -14,7 +14,8 @@ const showSchema = new Schema({
     originalPrice: Number,
     priceCurrencySign: String,
     timeCategory: Array,
-    youtubeVideoId: String
+    youtubeVideoId: String,
+    time1: String
 })
 
 
