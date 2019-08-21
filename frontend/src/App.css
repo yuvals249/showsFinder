@@ -23,25 +23,37 @@
   margin-top: 10vw;
 }
 
+.infoBar * { 
+  border: 1px solid red;
+  position: relative;
+ }
+ 
+ .infoBar *:after { 
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+
 .infoBar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.7fr 1.3fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
-  "showPrice showTitle" 
-  "showPrice showDate" 
-  "showPrice showLoc";
+  "showPriceBuyNow showTitle" 
+  "showPriceBuyNow showDate" 
+  "showPriceBuyNow showLoc";
   grid-area: infoBar;
   background-color: grey;
   border: 0.5px solid black;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   height: 7vw;
+  
 }
 
 .showPriceBuyNow { 
-  grid-area: showPrice;
-  font-weight: bold;
+  grid-area: showPrice; 
+  /* font-weight: bold;
   font-size: 1.5vw;
   background-color: #077C91;
   border: 0.2vw solid #150760;
@@ -51,9 +63,7 @@
   border-bottom-left-radius: 25px;
   text-align: center;
   cursor: pointer;
-  display: block;
-  position: absolute;
-  margin-right: 100%;
+  margin-right: 100%; */
 }
 
 .showPriceBuyNow:hover {
@@ -69,9 +79,10 @@
   grid-area: showTitle;  
   text-align: right;
   font-weight: bold;
-  font-size: 2vw; 
+  /* font-size: 2vw;  */
   color:white; 
   padding-right: 1vw;
+
 }
 
 .showDate { 
@@ -81,7 +92,6 @@
   font-size: 1.5vw; 
   color:white;  
   padding-right: 1vw;
-
 }
 
 .showLoc { 
@@ -138,9 +148,6 @@
   background-color:#37819B;
 }
 
-.animate {
-  width: 100%;
-}
 .search {
   width: 99vw;
   height: 4.5vw;
@@ -150,6 +157,7 @@
   color: white;
   font-family: Arimo;
   position: absolute;
+  margin-top: 0;
 }
 
 ::-webkit-input-placeholder  {
@@ -171,7 +179,7 @@
   font-size: 2.5vw;
 }
 
-.filterBox {
+#filterBox {
   background-color: rgb(43, 101, 122);
   width: 100vw;
   height: 10vw;
@@ -182,4 +190,5 @@
 .fixedMenu {
   position: fixed;
   background-color: black;
+  margin-top: 0;
 }
