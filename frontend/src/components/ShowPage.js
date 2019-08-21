@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
-import axios from 'axios'
+import PaypalExpressBtn from 'react-paypal-express-checkout';
 
 @observer
-class ShowPage extends Component {
-    constructor() {
-        super()
-    }
+class ShowPage extends Component {  
 
     render() {
+        const client = {
+            sandbox:    'AU9Z-v0OKEORBN1Bow_3DlBvP-siykd7Mh5yMmOc5Tn9GBo7DKG_vQpwbwl5q2qug1zi39UPKQEY_mHQ',
+        }
         let youtubeVideoId = 'https://www.youtube.com/embed/' + this.props.show.youtubeVideoId
         let show = this.props.show
         console.log(this.props.show)
@@ -19,7 +19,7 @@ class ShowPage extends Component {
                 <div>{show.address}</div>
                 <p>{show.description}</p>
                 <iframe width="560" height="315" src={youtubeVideoId} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button >להזמנה</button>
+                <PaypalExpressBtn client={client} currency={'USD'} total={1.00} />
             </div>
         )
     }
