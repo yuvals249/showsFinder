@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const showSchema = new Schema({
     address: String,
-    amountLeftPretty: String,
+    amountLeft: Number,
     category: Array,
     currentPrice: Number,
     date: String,
