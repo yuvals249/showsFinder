@@ -18,11 +18,11 @@ class ShowPage extends Component {
 
         const onSuccess = async (payment) => {
             // Congratulation, it came here means everything's fine!
+            alert("The payment was succeeded!", payment);
             await axios.put(`http://localhost:8080/payment/${this.props.show.name}/${this.props.show.amountLeft}`)
             let data = await axios.get('http://localhost:8080')
             this.props.Datastore.getdata(data.data)
             this.props.Datastore.updateStore(data.data)
-            alert("The payment was succeeded!", payment);
             // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
         }
 
