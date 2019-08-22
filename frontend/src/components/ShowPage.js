@@ -51,9 +51,10 @@ class ShowPage extends Component {
                 <h4 className='showPricePage'>{show.currentPrice}₪ <i class="fas fa-ticket-alt"> </i></h4>
                 <hr></hr>
                 <p className='showDescPage'>{show.description}</p>
-                <hr></hr>
-                <PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} className='paypalPayBoxPage' />
-                <div className='backButton' onClick={this.loadData}><i class="fas fa-undo-alt"></i></div>
+                <div className='showPageButton'>
+                    <div className='backButton' onClick={this.loadData}><i class="fas fa-home"></i></div>
+                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} /></div>
+                </div>
             </div>
         )
     }

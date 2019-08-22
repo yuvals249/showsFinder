@@ -9,6 +9,7 @@ class Search extends Component{
         super()
         this.state={
             filters:false,
+            flicker:false
         }
     }
     handlefilters = (e) => {
@@ -20,6 +21,18 @@ class Search extends Component{
             filters:!this.state.filters
         })
     }
+    changeClass=()=> {
+        if(!this.state.filters) {
+        this.setState({flicker:true}) 
+        document.getElementById('filterBox').classList.add("clicked")}
+        
+        else{
+            this.setState({flicker:false}) 
+            document.getElementById('filterBox').classList.remove("clicked")
+    
+        } 
+        }
+ 
     
     render(){
         return(
@@ -27,8 +40,8 @@ class Search extends Component{
                 <div className='fixedMenu'>
           
                 <input placeholder='Search'  name='name' type='text' onChange={this.handlefilters} className='search' />
-                <span className='upDown'><i className={this.state.filters ? "fas fa-chevron-up":"fas fa-chevron-down"} onClick={this.filters}></i></span>
-               {this.state.filters ? <div id='filterBox' ><Filters  /></div> : null}
+                <span className='upDown' ><i  className={this.state.filters ? "fas fa-chevron-up":"fas fa-chevron-down"} onClick={this.filters}></i></span>
+               {this.state.filters ? <Filters  /> : null}
 
                </div>
                </center>

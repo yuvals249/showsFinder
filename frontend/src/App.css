@@ -11,18 +11,17 @@
   grid-area: showContainer;
   width: 90vw;
   margin-top: 10vw;
-
+  box-shadow :2vw 2vw 1vw  #666e72;
+  border-bottom-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
 }
 
 .picContainer {
   grid-area: picContainer;
   width:90vw;
   height: 25vw;
-  margin-top: 5vw;
 }
   
-
-
   .infoBar {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr;
@@ -88,9 +87,6 @@
     font-size: 1.3vw;   
     padding-right: 2vw;
   } 
-
-
-
 
 .upDown {
   position: absolute;
@@ -197,7 +193,6 @@
   width: 100vw;
   height: 10vw;
   position: absolute;
-  margin-top: 4.5vw;
 }
 
 .fixedMenu {
@@ -207,44 +202,38 @@
   z-index: 1500;
 }
 
-
-
-
-
 .showPageContainer {
   background-color: #D6D6D6;
 }
 
 .showNamePage{
   text-align: right;
+  font-size: 2vw;
 }
 
 .showDatePage{
   text-align: right;
+  font-size: 1.5vw;
 }
 
 .showAdressPage{
   text-align: right;
+  font-size: 1.5vw;
 }
 
 .showDescPage{
   text-align: right;
+  font-size: 1.5vw;
 }
 
 .showPricePage{
   text-align: right;
-
+  font-size: 1.5vw;
 }
 
 .youtubeBoxPage{
     width: 100%;
     height: 40vw;
-}
-
-.paypalPayBoxPage{
-}
-
-.backButton{
 }
 
 .fa-star {
@@ -263,11 +252,27 @@
   color: #37819B;
 }
 
-.fa-undo-alt{
-  width: 5vw;
-  height: 5vw;
-  background-color: #686868; 
+.showPageButton {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+
+.fa-home{
+  width: 6vw;
+  height: 4.8vw;;
+  margin-top: 0;
+  background-color: #37819B; 
   color: #C9C9C9;
   font-size: 4vw;
   padding-top: 1vw;
+  float: left;
+  border-radius: 50%;
+  margin-left: 2vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+}
+
+.paypalPayBoxPage {
+  height: 100%;
+  margin-top: 1vw;
 }

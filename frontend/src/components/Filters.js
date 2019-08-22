@@ -6,6 +6,12 @@ import axios from 'axios'
 
 @observer
 class Filters extends Component {
+    constructor(){
+        super()
+        this.state={
+            flicker:false
+        }
+    }
     handlefilters = (e) => {
 
         this.props.Filterstore.handlefilters(e.target.name, e.target.value)
@@ -35,10 +41,13 @@ class Filters extends Component {
         this.props.Datastore.updateStore(data.data)
         console.log(data.data)
     }
+    
+ 
+
     render() {
        
         return (
-            <div>
+            <div id='filterBox'>
                 <div className='filterNum'>{this.props.Filterstore.cost}{this.props.Datastore.shows[0].priceCurrencySign}</div>
                 <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='slider'/>
 
