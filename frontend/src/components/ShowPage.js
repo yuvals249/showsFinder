@@ -42,6 +42,7 @@ class ShowPage extends Component {
         return (
             <div className='showPageContainer'>
                 <iframe className='youtubeBoxPage' src={youtubeVideoId} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className='infoBox'>
                 <h3 className='showNamePage'>{show.name} <i class="far fa-star"></i></h3>
                 <hr></hr>
                 <h4 className='showDatePage'>{show.date} <i class="far fa-calendar-alt"></i></h4>
@@ -51,6 +52,7 @@ class ShowPage extends Component {
                 <h4 className='showPricePage'>{show.currentPrice}₪ <i class="fas fa-ticket-alt"> </i></h4>
                 <hr></hr>
                 <p className='showDescPage'>{show.description}</p>
+                </div>
                 <div className='showPageButton'>
                     <div className='backButton' onClick={this.loadData}><i class="fas fa-home"></i></div>
                     <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} /></div>
