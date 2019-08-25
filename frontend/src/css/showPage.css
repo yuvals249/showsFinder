@@ -1,0 +1,214 @@
+@media only screen and (max-width: 500px) {
+        .showPageContainer {
+            background-color: #D6D6D6;
+            height: 100%;
+          }
+          
+          .showNamePage{
+            text-align: right;
+            font-size: 5vw;
+          }
+          
+          .showDatePage{
+            text-align: right;
+            font-size: 4vw;
+          }
+          
+          .showAdressPage{
+            text-align: right;
+            font-size: 3vw;
+          }
+          
+          .showDescPage{
+            text-align: right;
+            font-size: 2vw;
+          }
+          
+          .showPricePage{
+            text-align: right;
+            font-size: 3vw;
+          }
+          
+          .youtubeBoxPage{
+              width: 100%;
+              height: 40vw;
+          }
+          .showPageButton {
+            grid-area: showPageButton;
+            padding: 1vw;
+          }
+          
+          .backButton{
+            width: 25vw;
+            height: 10vw;
+            margin-left: 40%;
+            border-radius: 0.5vw;
+            background-color: #37819B;
+          }
+
+          .backButton:hover {
+            background-color: rgb(75, 155, 184); 
+          }
+
+          .backButton:active {
+            background-color: #37819B;
+          }
+          
+          .fa-star {
+            color: #37819B;
+          }
+          
+          .fa-calendar-alt{
+            color: #37819B;
+          }
+          
+          .fa-map-marked-alt{
+            color: #37819B;
+          }
+          
+          .fa-ticket-alt{
+            color: #37819B;
+          }
+          
+          .fa-undo-alt{
+            width: 5vw;
+            height: 5vw;
+            background-color: #686868; 
+            color: #C9C9C9;
+            font-size: 4vw;
+            padding-top: 1vw;
+          }
+          
+          .fa-home {
+            color: white;
+            font-size: 10vw;
+          }
+  }
+
+
+
+  /* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body{
+    background-color: #D6D6D6;
+  }
+          .showPageContainer {
+            display: grid;
+            grid-template-columns: 01fr 1fr;
+            grid-template-rows: 0.4fr 0.4fr 0.2fr;
+            grid-template-areas: "youtubeBoxPage infoBox" "youtubeBoxPage infoBox" "showPageButton showPageButton";
+            grid-area: showPageContainer;
+            background-color: #D6D6D6;
+          }
+          
+          .infoBox {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+            grid-template-areas: "showNamePage" "showDatePage" "showAdressPage" "showPricePage" "showDescPage";
+            grid-area: infoBox;
+            padding: 2vw;
+          }
+          
+          .showNamePage { grid-area: showNamePage;
+            text-align: right;
+            font-size: 2vw;
+            border-bottom: 0.1vw solid grey;
+          }
+          
+          .showDatePage { grid-area: showDatePage;
+            text-align: right;
+            font-size: 1.8vw;
+            border-bottom: 0.1vw solid grey;
+          }
+          
+          .showAdressPage { grid-area: showAdressPage;
+            text-align: right;
+            font-size: 1.6vw;
+            border-bottom: 0.1vw solid grey;
+          }
+          
+          .showPricePage { grid-area: showPricePage;
+            text-align: right;
+            font-size: 1.4vw;
+            border-bottom: 0.1vw solid grey;
+          }
+          
+          .showDescPage { grid-area: showDescPage;
+            text-align: right;
+            font-size: 1.1vw;
+            border-bottom: 0.1vw solid grey;
+          }
+          .youtubeBoxPage{
+            width: 88%;
+            height: 90%;
+            grid-area: youtubeBoxPage;
+            padding: 1vw;
+            margin-left: 1vw;
+        }
+          .showPageButton {
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr;
+            grid-template-rows: 0.5fr;
+            grid-template-areas: "backButton paypalPayBoxPage";
+            grid-area: showPageButton;
+            padding-bottom: 2vw;
+            padding-right: 2vw;
+          }
+          
+          .backButton { grid-area: backButton;
+            width: 90%;
+            height: 4vw;
+            margin-left: 15%;
+            border-radius: 0.3vw;
+            background-color: #37819B;
+            transition: 0.3s;
+            margin-left: 2vw;
+            margin-top: 2vw;
+            cursor: pointer;
+         }
+
+            .backButton:hover {
+              background-color: rgb(75, 155, 184); 
+            }
+
+            .backButton:active {
+              background-color: #37819B;
+            }
+          
+          .paypalPayBoxPage { 
+            grid-area: paypalPayBoxPage; 
+            margin-top: 2vw;
+          }
+
+
+          .fa-star {
+            color: #37819B;
+          }
+          
+          .fa-calendar-alt{
+            color: #37819B;
+          }
+          
+          .fa-map-marked-alt{
+            color: #37819B;
+          }
+          
+          .fa-ticket-alt{
+            color: #37819B;
+          }
+          
+          .fa-undo-alt{
+            width: 5vw;
+            height: 5vw;
+            background-color: #686868; 
+            color: #C9C9C9;
+            font-size: 4vw;
+          }
+
+          .fa-home {
+            color: white;
+            font-size: 4vw;
+            cursor: pointer;
+          }
+  }

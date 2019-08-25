@@ -1,0 +1,425 @@
+@media only screen and (max-width: 500px) {
+  .mainContainer {
+    margin-top: 10vw;
+  }
+    .showContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "picContainer" "infoBar";
+      grid-area: showContainer;
+      width: 90vw;
+    }
+    
+    .picContainer {
+      grid-area: picContainer;
+      width:90vw;
+      height: 25vw;
+      margin-top: 5vw;
+      box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
+    }
+      
+    .infoBar {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "showPriceBuyNow showTitle" 
+      "showPriceBuyNow showDate" 
+      "showPriceBuyNow showLoc";
+      grid-area: infoBar;
+      background-color: #D3D3D3;
+      border-bottom-left-radius: 4vw;
+      border-bottom-right-radius: 4vw;
+      height: 6vw;
+      box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);  
+  }
+    
+    .showPriceBuyNow { 
+    grid-area: showPrice; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    background-color: #077C91;
+    color: white;
+    width: 15vw;
+    height: 6vw;
+    border-bottom-left-radius: 4vw;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 100%;
+    z-index: 1000;
+    position: absolute;
+    line-height: 2vw;
+  }
+    
+  .showPriceBuyNow:hover {
+    background-color: rgb(11, 156, 182);
+    transition: 0.3s;
+  }
+    
+  .showPriceBuyNow:active {
+    background-color: #077C91;
+  }
+    
+  .showTitle { 
+    grid-area: showTitle;  
+    text-align: right;
+    font-weight: bold;
+    font-size: 2vw; 
+    padding-right: 1vw;
+  }
+    
+  .showDate { 
+    grid-area: showDate; 
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5vw; 
+    padding-right: 1vw;
+  }
+    
+  .showLoc { 
+    grid-area: showLoc;  
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.3vw;   
+    padding-right: 2vw;
+  } 
+    
+    
+    
+  .upDown {
+  position: absolute;
+  margin-left: 95vw;
+  }
+    
+  .fa-chevron-down {
+    width: 5vw;
+    height: 4.5vw;
+    background-color:#37819B;
+    font-size: 4.5vw;
+    color:white;
+    cursor: pointer;
+  }
+    
+  .fa-chevron-down:hover {
+    background-color:rgb(68, 162, 196);
+    transition: 0.3s;
+  }
+    
+  .fa-chevron-down:active {
+    background-color:#37819B;
+  }
+    
+  .fa-chevron-up {
+    width: 5vw;
+    height: 5vw;
+    background-color:#37819B;
+    font-size: 4.5vw;
+    color:white;
+    cursor: pointer;
+    position: absolute;
+  }
+    
+    .fa-chevron-up:hover {
+      background-color:rgb(68, 162, 196);
+      transition: 0.3s;
+    }
+    
+    .fa-chevron-up:active {
+      background-color:#37819B;
+    }
+    
+    .search {
+      width: 100vw;
+      height: 4vw;
+      border: none;
+      background-color: #37819B;
+      font-size: 2vw;
+      color: white;
+      font-family: Arimo;
+      position: absolute;
+      margin-top: 0;
+    }
+    
+    ::-webkit-input-placeholder  {
+      color: white;
+    }
+    
+    .dropFilterLoc {
+      width: 25vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 1vw;
+      margin-top: -5vw;
+      font-size: 2vw;
+    }
+
+    .dropFilterDate {
+      width: 25vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 5vw;
+      margin-bottom: 5vw;
+      font-size: 2vw;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: 0px;
+      width: 90%; 
+      height: 1vw;
+      border-radius: 5vw; 
+      background: #F2F2F2; 
+      outline: none; 
+      opacity: 0.7; 
+      -webkit-transition: .2s; 
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1; 
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; 
+      appearance: none;
+      width: 2vw; 
+      height: 2vw; 
+      border-radius: 20vw;
+      background: #CECECE; 
+      cursor: pointer; 
+    }
+    
+    .filterNum {
+      font-size: 2.5vw;
+    }
+    
+    #filterBox {
+      background-color: rgb(43, 101, 122);
+      width: 100vw;
+      height: 13vw;
+      position: absolute;
+      margin-top: 4.5vw;
+    }
+    
+    .fixedMenu {
+      position: fixed;
+      background-color: black;
+      top: 0;
+      z-index: 1500;
+    }
+  }
+
+
+
+
+
+  /* Desktop Styles */
+@media only screen and (min-width: 700px) {
+  .mainContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .showContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "picContainer" "infoBar";
+    grid-area: showContainer;
+  }
+  
+  .picContainer {
+    grid-area: picContainer;
+    width:30vw;
+    height: 15vw;
+    margin-top: 5vw;
+    box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
+  }
+    
+  .infoBar {
+    display: grid;
+    grid-template-columns: 0.4fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "showPriceBuyNow showTitle" 
+    "showPriceBuyNow showDate" 
+    "showPriceBuyNow showLoc";
+    grid-area: infoBar;
+    background-color: #D3D3D3;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    width:30vw;
+    height: 4vw;
+    box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
+}
+  
+  .showPriceBuyNow { 
+  grid-area: showPrice; 
+  font-weight: bold;
+  font-size: 1vw;
+  background-color: #077C91;
+  color: white;
+  width: 7vw;
+  height: 4vw;
+  border-bottom-left-radius: 2vw;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 100%;
+  z-index: 1000;
+  position: absolute;
+  line-height: 1.4vw;
+}
+  
+.showPriceBuyNow:hover {
+  background-color: rgb(11, 156, 182);
+  transition: 0.3s;
+}
+  
+.showPriceBuyNow:active {
+  background-color: #077C91;
+}
+  
+.showTitle { 
+  grid-area: showTitle;  
+  text-align: right;
+  font-weight: bold;
+  font-size: 1vw; 
+  padding-right: 1vw;
+}
+  
+.showDate { 
+  grid-area: showDate; 
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.9vw; 
+  padding-right: 1vw;
+}
+  
+.showLoc { 
+  grid-area: showLoc;  
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.8vw;   
+  padding-right: 2vw;
+} 
+  
+
+/*Search Bar*/
+.upDown {
+position: absolute;
+margin-left: 94vw;
+}
+  
+.fa-chevron-down {
+  width: 5vw;
+  height: 4vw;
+  background-color:#37819B;
+  font-size: 4.5vw;
+  color:white;
+  cursor: pointer;
+}
+  
+.fa-chevron-down:hover {
+  background-color:rgb(68, 162, 196);
+  transition: 0.3s;
+}
+  
+.fa-chevron-down:active {
+  background-color:#37819B;
+}
+  
+.fa-chevron-up {
+  width: 5vw;
+  height: 4vw;
+  background-color:#37819B;
+  font-size: 4.5vw;
+  color:white;
+  cursor: pointer;
+  position: absolute;
+}
+  
+.fa-chevron-up:hover {
+  background-color:rgb(68, 162, 196);
+  transition: 0.3s;
+  }
+  
+  .fa-chevron-up:active {
+    background-color:#37819B;
+  }
+  
+  .search {
+    width: 100vw;
+    height: 4vw;
+    border: none;
+    background-color: #37819B;
+    font-size: 2vw;
+    color: white;
+    font-family: Arimo;
+    position: absolute;
+    margin-top: 0;
+  }
+  
+  ::-webkit-input-placeholder  {
+    color: white;
+  }
+  
+  #dropFilter {
+    width: 20vw;
+    height: 2vw;
+    background-color: #37819B;
+    border: none;
+    margin-left: 1vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 0px;
+    width: 50%; 
+    height: 0.5vw;
+    border-radius: 3vw; 
+    background: #F2F2F2; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 1vw; 
+    height: 1vw; 
+    border-radius: 15vw;
+    background: #CECECE; 
+    cursor: pointer; 
+  }
+  
+  .filterNum {
+    font-size: 2vw;
+  }
+  
+  #filterBox {
+    background-color: rgb(43, 101, 122);
+    width: 100vw;
+    height: 7vw;
+    position: absolute;
+    margin-top: 4vw;
+  }
+  
+  .fixedMenu {
+    position: fixed;
+    background-color: #ecf0f1;
+    top: 0;
+    z-index: 1500;
+  } 
+}
