@@ -25,7 +25,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route exact path="/" component={Search} />
-         <div  className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
+          <div className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
           <Route path="/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
         </div>
       </Router>

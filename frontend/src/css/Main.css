@@ -1,4 +1,4 @@
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .mainContainer {
     margin-top: 10vw;
   }
@@ -15,6 +15,7 @@
       width:90vw;
       height: 25vw;
       margin-top: 5vw;
+      box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
     }
       
     .infoBar {
@@ -29,7 +30,8 @@
       background-color: #D3D3D3;
       border-bottom-left-radius: 4vw;
       border-bottom-right-radius: 4vw;
-      height: 6vw;  
+      height: 6vw;
+      box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);  
   }
     
     .showPriceBuyNow { 
@@ -46,6 +48,7 @@
     margin-right: 100%;
     z-index: 1000;
     position: absolute;
+    line-height: 2vw;
   }
     
   .showPriceBuyNow:hover {
@@ -85,7 +88,7 @@
     
   .upDown {
   position: absolute;
-  margin-left: 94vw;
+  margin-left: 95vw;
   }
     
   .fa-chevron-down {
@@ -108,7 +111,7 @@
     
   .fa-chevron-up {
     width: 5vw;
-    height: 4.5vw;
+    height: 5vw;
     background-color:#37819B;
     font-size: 4.5vw;
     color:white;
@@ -127,7 +130,7 @@
     
     .search {
       width: 100vw;
-      height: 4.5vw;
+      height: 4vw;
       border: none;
       background-color: #37819B;
       font-size: 2vw;
@@ -141,12 +144,23 @@
       color: white;
     }
     
-    .dropFilter {
+    .dropFilterLoc {
       width: 25vw;
-      height: 2vw;
+      height: 3vw;
       background-color: #37819B;
       border: none;
       margin-left: 1vw;
+      margin-top: -5vw;
+      font-size: 2vw;
+    }
+
+    .dropFilterDate {
+      width: 25vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 5vw;
+      margin-bottom: 5vw;
       font-size: 2vw;
     }
     
@@ -185,7 +199,7 @@
     #filterBox {
       background-color: rgb(43, 101, 122);
       width: 100vw;
-      height: 10vw;
+      height: 13vw;
       position: absolute;
       margin-top: 4.5vw;
     }
@@ -203,12 +217,11 @@
 
 
   /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 700px) {
   .mainContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    /* margin-top: 10vw; */
   }
 
   .showContainer {
@@ -223,11 +236,12 @@
     width:30vw;
     height: 15vw;
     margin-top: 5vw;
+    box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
   }
     
   .infoBar {
     display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-columns: 0.4fr 1.3fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "showPriceBuyNow showTitle" 
@@ -235,10 +249,11 @@
     "showPriceBuyNow showLoc";
     grid-area: infoBar;
     background-color: #D3D3D3;
-    border-bottom-left-radius: 4vw;
-    border-bottom-right-radius: 4vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
     width:30vw;
-    height: 4vw;  
+    height: 4vw;
+    box-shadow: 0.3vw 0.3vw rgb(70, 62, 62);
 }
   
   .showPriceBuyNow { 
@@ -247,14 +262,15 @@
   font-size: 1vw;
   background-color: #077C91;
   color: white;
-  width: 10vw;
+  width: 7vw;
   height: 4vw;
-  border-bottom-left-radius: 4vw;
+  border-bottom-left-radius: 2vw;
   text-align: center;
   cursor: pointer;
   margin-right: 100%;
   z-index: 1000;
   position: absolute;
+  line-height: 1.4vw;
 }
   
 .showPriceBuyNow:hover {
@@ -350,15 +366,14 @@ margin-left: 94vw;
     color: white;
   }
   
-  .dropFilter {
-    width: 10vw;
-    height: 1vw;
+  #dropFilter {
+    width: 20vw;
+    height: 2vw;
     background-color: #37819B;
     border: none;
     margin-left: 1vw;
     font-size: 1vw;
     margin-top: 1vw;
-  
   }
   
   .slider {

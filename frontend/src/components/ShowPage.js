@@ -36,6 +36,14 @@ class ShowPage extends Component {
             sandbox: 'AU9Z-v0OKEORBN1Bow_3DlBvP-siykd7Mh5yMmOc5Tn9GBo7DKG_vQpwbwl5q2qug1zi39UPKQEY_mHQ',
         }
 
+        const style = {
+            size: 'small',
+            color: 'blue',
+            shape: 'rect',
+            label: 'checkout',
+            size: 'responsive'
+        }
+
         let youtubeVideoId = 'https://www.youtube.com/embed/' + this.props.show.youtubeVideoId
         let show = this.props.show
 
@@ -43,19 +51,19 @@ class ShowPage extends Component {
             <div className='showPageContainer'>
                 <iframe className='youtubeBoxPage' src={youtubeVideoId} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div className='infoBox'>
-                <h3 className='showNamePage'>{show.name} <i class="far fa-star"></i></h3>
-                <hr></hr>
-                <h4 className='showDatePage'>{show.date} <i class="far fa-calendar-alt"></i></h4>
-                <hr></hr>
-                <h4 className='showAdressPage'>{show.address} <i class="fas fa-map-marked-alt"></i></h4>
-                <hr></hr>
-                <h4 className='showPricePage'>{show.currentPrice}₪ <i class="fas fa-ticket-alt"> </i></h4>
-                <hr></hr>
-                <p className='showDescPage'>{show.description}</p>
+                    <h3 className='showNamePage'>{show.name} <i class="far fa-star"></i></h3>
+                    <hr></hr>
+                    <h4 className='showDatePage'>{show.date} <i class="far fa-calendar-alt"></i></h4>
+                    <hr></hr>
+                    <h4 className='showAdressPage'>{show.address} <i class="fas fa-map-marked-alt"></i></h4>
+                    <hr></hr>
+                    <h4 className='showPricePage'>{show.currentPrice}₪ <i class="fas fa-ticket-alt"> </i></h4>
+                    <hr></hr>
+                    <p className='showDescPage'>{show.description}</p>
                 </div>
                 <div className='showPageButton'>
+                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} style={style} /></div>
                     <div className='backButton' onClick={this.loadData}><i class="fas fa-home"></i></div>
-                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} /></div>
                 </div>
             </div>
         )

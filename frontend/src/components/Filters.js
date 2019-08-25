@@ -51,19 +51,19 @@ class Filters extends Component {
                 <div className='filterNum'>{this.props.Filterstore.cost}{this.props.Datastore.shows[0].priceCurrencySign}</div>
                 <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='slider'/>
 
-                <br></br>
-                
-                <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} className='dropFilter' >
+            <div className='dropDownBox'>               
+                <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} className='dropFilterLoc' id='dropFilter' >
                     <option value='all'>All cities</option>
                     {this.locations().map(l=><option key={l} value={l}>{l.charAt(0).toUpperCase()}{l.slice(1).toLowerCase()}</option>)}
                 </select>
-                <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} className='dropFilter'>
+                <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} className='dropFilterDate' id='dropFilter'>
                    <option value='all'>All dates</option>
 
                    <option value='today'>Today</option>
                    <option value='tomorrow'>Tomorrow</option>
                    <option value='weekend'>This weekend</option>
                 </select>
+            </div> 
             </div>
         )
     }
