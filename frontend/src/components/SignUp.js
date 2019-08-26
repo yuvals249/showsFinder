@@ -64,7 +64,6 @@ class SignUp extends Component {
                     </div>
                     {this.checkinputs().confirmpassword ? null : <div>confirm your password please</div>}
                     <button onClick={this.newuser} >SignUp</button>
-                    <Link to='/'>Home</Link>
             </div>
         )
     }
