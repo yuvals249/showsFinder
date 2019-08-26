@@ -39,14 +39,6 @@
             padding: 1vw;
           }
           
-          .backButton{
-            width: 25vw;
-            height: 10vw;
-            margin-left: 40%;
-            border-radius: 0.5vw;
-            background-color: #37819B;
-          }
-
           .backButton:hover {
             background-color: rgb(75, 155, 184); 
           }
@@ -159,18 +151,6 @@
             margin-top: 1vw;
             padding-right: 2vw;
           }
-          
-          .backButton { grid-area: backButton;
-            width: 90%;
-            height: 4vw;
-            margin-left: 15%;
-            border-radius: 0.3vw;
-            background-color: #37819B;
-            transition: 0.3s;
-            margin-left: 2vw;
-            margin-top: 2vw;
-            cursor: pointer;
-         }
 
             .backButton:hover {
               background-color: rgb(75, 155, 184); 
