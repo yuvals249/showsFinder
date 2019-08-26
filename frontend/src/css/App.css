@@ -336,8 +336,18 @@ font-size: 1.5vw;
       position: absolute;
       margin-left: 30vw;
       z-index: 40000;
+      animation: fade 0.3s linear forwards;
     }
-
+    @keyframes fade {
+      from {
+        opacity: 0.5;
+        visibility: hidden;
+      }
+      to { 
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
    
   ::-webkit-input-placeholder  {
@@ -409,6 +419,7 @@ font-size: 1.5vw;
     transition: 0.3s;
     border-bottom-left-radius: 0.5vw;
     border-bottom-right-radius: 0.5vw;
+    animation: fade 0.3s linear forwards;
   }
   
   .fixedMenu {
@@ -417,7 +428,7 @@ font-size: 1.5vw;
     top: 0;
     z-index: 50000;
     margin-top: 3.5vw;
-    transition: 0.3s;
+    animation: fade 0.3s linear forwards;
   }
   
     .fa-chevron-down {
@@ -431,6 +442,7 @@ font-size: 1.5vw;
       margin-left: 65vw;
       z-index: 70000;
       border-top-right-radius: 0.5vw;
+      animation: fade 0.3s linear forwards;
     }
       
     .fa-chevron-down:hover {
@@ -453,6 +465,7 @@ font-size: 1.5vw;
       margin-left: 65vw;
       z-index: 70000;
       border-top-right-radius: 0.5vw;
+      animation: fade 0.3s linear forwards;
     }
       
       .fa-chevron-up:hover {
