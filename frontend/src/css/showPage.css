@@ -2,6 +2,7 @@
         .showPageContainer {
             background-color: #D6D6D6;
             height: 100%;
+            margin-top: 1vw;
           }
           
           .showNamePage{
@@ -99,6 +100,7 @@
             grid-template-areas: "youtubeBoxPage infoBox" "youtubeBoxPage infoBox" "showPageButton showPageButton";
             grid-area: showPageContainer;
             background-color: #D6D6D6;
+            margin-top: 3vw;
           }
           
           .infoBox {

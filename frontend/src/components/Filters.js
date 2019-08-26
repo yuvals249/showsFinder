@@ -58,7 +58,6 @@ class Filters extends Component {
                 </select>
                 <select name="date" onChange={this.handlefilters} value={this.props.Filterstore.date} className='dropFilterDate' id='dropFilter'>
                    <option value='all'>All dates</option>
-
                    <option value='today'>Today</option>
                    <option value='tomorrow'>Tomorrow</option>
                    <option value='weekend'>This weekend</option>
