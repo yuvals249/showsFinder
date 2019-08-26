@@ -13,7 +13,6 @@ return (
     </div>
 
 
-    <hr></hr>
 
     <h2 className='SecTitle'>Purchased Shows:</h2>
     <div className='PurchaseContainer'>
