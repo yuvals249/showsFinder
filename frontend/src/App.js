@@ -8,6 +8,8 @@ import axios from 'axios'
 import Show from './components/Show'
 import Search from './components/search'
 import ShowPage from './components/ShowPage';
+import Navbar from './components/Navbar';
+
 
 @inject("Filterstore", "Datastore")
 @observer
@@ -24,9 +26,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route exact path="/" component={Search} />
+          <Navbar/>
           <div className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
-          <Route path="/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
+          <Route path="/inform/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
         </div>
       </Router>
     );

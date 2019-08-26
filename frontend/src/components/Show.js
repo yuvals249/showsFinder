@@ -20,7 +20,7 @@ class Show extends Component {
                         <div class='showTitle'>{this.props.show.name}</div>
                         <div class='showDate'>{this.props.show.date}  {this.props.show.time1}</div>
                         <div class='showLoc'>{this.props.show.address}</div>
-                        <Link to={`/${this.props.show.name}`}>
+                        <Link to={`/inform/${this.props.show.name}`}>
                             <div onClick={this.showinfo} class='showPriceBuyNow'>{this.props.show.currentPrice} <i class="fas fa-shekel-sign"></i> <br></br> אחרונים {this.props.show.amountLeft} <br></br>Buy Now</div>
                         </Link>
                     </div>

@@ -25,14 +25,14 @@ class Search extends Component {
 
     render() {
         return (
-            <center >
+            
                 <div className='fixedMenu'>
                     <input placeholder='Search' name='name' type='text' onChange={this.handlefilters} className='search' />
-                    <span className='upDown' ><i className={this.state.filters ? "fas fa-chevron-up" : "fas fa-chevron-down"} onClick={this.filters}></i></span>
+                    <i className={this.state.filters ? "fas fa-chevron-up" : "fas fa-chevron-down"} onClick={this.filters}></i>
                     {this.state.filters ? <Filters /> : null}
 
                 </div>
-            </center>
+
         )
     }
 }

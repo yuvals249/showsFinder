@@ -7,3 +7,460 @@
 body {
   background-color: #ecf0f1;
 }
+
+
+@media only screen and (max-width: 500px) {
+  #nav-bar {
+    background-color: #077C91;
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row ; 
+    font-family: Montserrat;
+    text-align: center;
+    position: fixed;
+    z-index: 2000;
+    font-family: Arimo;
+    margin-top: -10vw;
+  }
+  
+  .NavLinks{
+    display: flex;
+    flex-direction: row ; 
+    margin-left: 45% ;
+    line-height: 3vw;
+  
+  }
+  
+  .NavLinks div {
+  width: 25vw;
+  text-align: center;
+  padding-top: 1.5vh;
+  font-size: 3.5vw;
+  }
+  
+  .NavLinks div:hover {
+    background-color: #2CA6D6;
+    transition: 0.3s;
+  }
+  
+  .NavLinks div:active {
+    background-color: rgb(30, 97, 124);
+    transition: 0.3s;
+  }
+  
+  #nav-bar span {
+    font-weight: bold;
+    margin-left: 1% ;
+    padding-top: 0.5vh;
+    font-size: 5vw; 
+  }
+  .logo {
+    color:white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .logo:hover {
+    border-radius: 1vw;
+    background-color: #2CA6D6;
+    transition: 0.3s;
+  }
+  
+  .logo:active {
+    border-radius: 1vw;
+    background-color: rgb(30, 97, 124);
+  }
+  
+  .link {
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    }
+  
+  
+      .fa-angle-double-up {
+      color: #C6C6C6;
+      position: absolute;
+      font-size: 10vw;
+      margin-left: 50%;
+      cursor: pointer;
+    }
+
+    .fa-angle-double-down {
+      color: #C6C6C6;
+      position: absolute;
+      font-size: 10vw;
+      margin-left: 50%;
+      cursor: pointer;
+    }
+  
+      .search {
+        width: 70vw;
+        height: 4.5vw;
+        border: none;
+        background-color: #37819B;
+        font-size: 4.5vw;
+        color: white;
+        font-family: Arimo;
+        position: absolute;
+        margin-left: 15vw;
+        z-index: 40000;
+      }
+      
+      .dropDownBox{
+        margin-top: -1vw;
+      }
+  
+    ::-webkit-input-placeholder  {
+      color: white;
+    }
+    
+    .dropFilterLoc {
+      width: 20vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 1vw;
+      margin-top: -5vw;
+      font-size: 2vw;
+    }
+  
+    .dropFilterDate {
+      width: 20vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 5vw;
+      margin-bottom: 5vw;
+      font-size: 2vw;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: 0px;
+      width: 90%; 
+      height: 1.2vw;
+      border-radius: 5vw; 
+      background: #F2F2F2; 
+      outline: none; 
+      opacity: 0.7; 
+      -webkit-transition: .2s; 
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1; 
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; 
+      appearance: none;
+      width: 3vw; 
+      height: 3vw; 
+      border-radius: 20vw;
+      background: #CECECE; 
+      cursor: pointer; 
+    }
+    
+    .filterNum {
+      font-size: 3.5vw;
+    }
+    
+    #filterBox {
+      background-color: rgb(43, 101, 122);
+      width: 70vw;
+      height: 13vw;
+      position: absolute;
+      margin-top: 5vw;
+      margin-left: 15vw;
+      transition: 0.3s;
+      border-bottom-left-radius: 0.5vw;
+      border-bottom-right-radius: 0.5vw;
+    }
+    
+    .fixedMenu {
+      position: fixed;
+      background-color: black;
+      top: 0;
+      z-index: 50000;
+      margin-top: 10vw;
+      transition: 0.3s;
+    }
+    
+      .fa-chevron-down {
+        position: absolute;
+        width: 10vw;
+        height: 5vw;
+        background-color:#37819B;
+        font-size: 5vw;
+        color:white;
+        cursor: pointer;
+        margin-left: 75vw;
+        z-index: 70000;
+        border-top-right-radius: 0.5vw;
+      }
+        
+      .fa-chevron-down:hover {
+        background-color:rgb(68, 162, 196);
+        transition: 0.3s;
+      }
+        
+      .fa-chevron-down:active {
+        background-color:#37819B;
+      }
+        
+      .fa-chevron-up {
+        position: absolute;
+        width: 10vw;
+        height: 5vw;
+        background-color:#37819B;
+        font-size: 5vw;
+        color:white;
+        cursor: pointer;
+        margin-left: 75vw;
+        z-index: 70000;
+        border-top-right-radius: 0.5vw;
+      }
+        
+        .fa-chevron-up:hover {
+          background-color:rgb(68, 162, 196);
+          transition: 0.3s;
+        }
+        
+        .fa-chevron-up:active {
+          background-color:#37819B;
+        }
+}
+
+
+
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 700px) {
+#nav-bar {
+  background-color: #077C91;
+  height: 3.5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row ; 
+  font-family: Montserrat;
+  text-align: center;
+  position: fixed;
+  z-index: 2000;
+  font-family: Arimo;
+}
+
+.NavLinks{
+  display: flex;
+  flex-direction: row ; 
+  margin-left: 70% ;
+  line-height: 3vw;
+
+}
+
+.NavLinks div {
+width: 15vw;
+text-align: center;
+padding-top: 0.5vh;
+font-size: 1.5vw;
+}
+
+.NavLinks div:hover {
+  background-color: #2CA6D6;
+  transition: 0.3s;
+}
+
+.NavLinks div:active {
+  background-color: rgb(30, 97, 124);
+  transition: 0.3s;
+}
+
+#nav-bar span {
+  font-weight: bold;
+  margin-left: 1% ;
+  padding-top: 0.5vh;
+  font-size: 2.5vw; 
+}
+.logo {
+  color:white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.logo:hover {
+  border-radius: 1vw;
+  background-color: #2CA6D6;
+  transition: 0.3s;
+}
+
+.logo:active {
+  border-radius: 1vw;
+  background-color: rgb(30, 97, 124);
+}
+
+.link {
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  }
+
+
+    .fa-angle-double-up {
+    color: #C6C6C6;
+    position: absolute;
+    font-size: 3.5vw;
+    margin-left: 50%;
+    cursor: pointer;
+  }
+
+  .fa-angle-double-down {
+    color: #C6C6C6;
+    position: absolute;
+    font-size: 3.5vw;
+    margin-left: 50%;
+    cursor: pointer;
+  }
+
+    .search {
+      width: 40vw;
+      height: 2vw;
+      border: none;
+      background-color: #37819B;
+      font-size: 2vw;
+      color: white;
+      font-family: Arimo;
+      position: absolute;
+      margin-left: 30vw;
+      z-index: 40000;
+    }
+
+
+   
+  ::-webkit-input-placeholder  {
+    color: white;
+  }
+
+  .dropDownBox{
+    margin-top: 1vw;
+  }
+  
+  .dropFilterLoc {
+    width: 15vw;
+    height: 2vw;
+    background-color: #37819B;
+    border: none;
+    margin-left: 1vw;
+    font-size: 2vw;
+  }
+
+  .dropFilterDate {
+    width: 15vw;
+    height: 2vw;
+    background-color: #37819B;
+    border: none;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    font-size: 2vw;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 0px;
+    width: 70%; 
+    height: 0.5vw;
+    border-radius: 5vw; 
+    background: #F2F2F2; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 1.5vw; 
+    height: 1.5vw; 
+    border-radius: 20vw;
+    background: #CECECE; 
+    cursor: pointer; 
+  }
+  
+  .filterNum {
+    font-size: 2vw;
+  }
+  
+  #filterBox {
+    background-color: rgb(43, 101, 122);
+    width: 40vw;
+    height: 8vw;
+    position: absolute;
+    margin-top: 2vw;
+    margin-left: 30vw;
+    transition: 0.3s;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+  }
+  
+  .fixedMenu {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    z-index: 50000;
+    margin-top: 3.5vw;
+    transition: 0.3s;
+  }
+  
+    .fa-chevron-down {
+      position: absolute;
+      width: 5vw;
+      height: 2vw;
+      background-color:#37819B;
+      font-size: 2.5vw;
+      color:white;
+      cursor: pointer;
+      margin-left: 65vw;
+      z-index: 70000;
+      border-top-right-radius: 0.5vw;
+    }
+      
+    .fa-chevron-down:hover {
+      background-color:rgb(68, 162, 196);
+      transition: 0.3s;
+    }
+      
+    .fa-chevron-down:active {
+      background-color:#37819B;
+    }
+      
+    .fa-chevron-up {
+      width: 5vw;
+      height: 2vw;
+      background-color:#37819B;
+      font-size: 2.5vw;
+      color:white;
+      cursor: pointer;
+      position: absolute;
+      margin-left: 65vw;
+      z-index: 70000;
+      border-top-right-radius: 0.5vw;
+    }
+      
+      .fa-chevron-up:hover {
+        background-color:rgb(68, 162, 196);
+        transition: 0.3s;
+      }
+      
+      .fa-chevron-up:active {
+        background-color:#37819B;
+      }
+}
