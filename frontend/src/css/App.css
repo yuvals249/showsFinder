@@ -81,14 +81,17 @@ body {
         width: 40vw;
         height: 4.5vw;
         border: none;
-        background-color: rgb(142, 216, 243);
+        background-color: white;
         font-size: 4.5vw;
-        color: white;
         font-family: Arimo;
         position: absolute;
         margin-left: 32vw;
         z-index: 40000;
         border-radius: 2vw;
+      }
+      
+      .search::placeholder {
+        color:black;
       }
       
       .dropDownBox{
@@ -305,9 +308,8 @@ font-size: 1.5vw;
       width: 40vw;
       height: 2vw;
       border: none;
-      background-color: rgb(142, 216, 243);
+      background-color: white;
       font-size: 2vw;
-      color: white;
       font-family: Arimo;
       position: absolute;
       margin-left: 30vw;
@@ -315,6 +317,11 @@ font-size: 1.5vw;
       animation: fade 0.3s linear forwards;
       border-radius: 2vw;
     }
+
+    .search::placeholder {
+      color:black;
+    }
+
     @keyframes fade {
       from {
         opacity: 0.5;
