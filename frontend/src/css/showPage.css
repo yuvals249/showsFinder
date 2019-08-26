@@ -62,20 +62,6 @@
           .fa-ticket-alt{
             color: #37819B;
           }
-          
-          .fa-undo-alt{
-            width: 5vw;
-            height: 5vw;
-            background-color: #686868; 
-            color: #C9C9C9;
-            font-size: 4vw;
-            padding-top: 1vw;
-          }
-          
-          .fa-home {
-            color: white;
-            font-size: 10vw;
-          }
   }
 
 
@@ -180,19 +166,5 @@
           
           .fa-ticket-alt{
             color: #37819B;
-          }
-          
-          .fa-undo-alt{
-            width: 5vw;
-            height: 5vw;
-            background-color: #686868; 
-            color: #C9C9C9;
-            font-size: 4vw;
-          }
-
-          .fa-home {
-            color: white;
-            font-size: 4vw;
-            cursor: pointer;
           }
   }
