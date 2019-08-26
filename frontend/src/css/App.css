@@ -1,6 +1,5 @@
 .App {
   font-family: Arimo;
-  text-align: center;
   background-color: #ecf0f1;
 }
 
@@ -402,7 +401,6 @@ font-size: 1.5vw;
   
   .fixedMenu {
     position: fixed;
-    background-color: black;
     z-index: 50000;
     margin-top: 0.5vw;
     animation: fade 0.3s linear forwards;

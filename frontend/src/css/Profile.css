@@ -1,0 +1,28 @@
+body{
+    background-color: #ecf0f1;
+}
+
+.PorfileContainer {
+    font-family: Arimo;
+    background-color: #ecf0f1;
+    padding: 2vw;
+}
+
+.profTitle{
+    font-size: 5vw;
+}
+
+.SecTitle{
+    font-size: 2vw;
+}
+
+
+.BookmarkContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.PurchaseContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
