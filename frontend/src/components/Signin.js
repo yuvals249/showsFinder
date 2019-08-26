@@ -7,7 +7,7 @@ class SignIn extends Component {
     
     handleinputs = (e) => {
 
-        this.props.Filterstore.handleinputs(e.target.name, e.target.value)
+        this.props.Signinstore.handleinputs(e.target.name, e.target.value)
         
     }
 
@@ -18,11 +18,11 @@ class SignIn extends Component {
     render (){
         return(
             <div>
-                <form>
+                
                     <input type='text' name='email' onChange={this.handleinputs} placeholder='email@example.com' ></input>
                     <input type='password' name='password' onChange={this.handleinputs} placeholder='password' ></input>
                     <button onClick={this.checkuser} >LogIn</button>
-                </form>
+                
             </div>
         )
     }
