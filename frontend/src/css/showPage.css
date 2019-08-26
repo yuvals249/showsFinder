@@ -142,6 +142,8 @@
           .youtubeBoxPage{
             width: 88%;
             height: 90%;
+            max-height: 90%;
+            overflow: hidden;
             grid-area: youtubeBoxPage;
             padding: 1vw;
             margin-left: 1vw;
@@ -152,7 +154,7 @@
             grid-template-rows: 0.5fr;
             grid-template-areas: "backButton paypalPayBoxPage";
             grid-area: showPageButton;
-            padding-bottom: 2vw;
+            margin-top: 1vw;
             padding-right: 2vw;
           }
           
