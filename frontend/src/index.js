@@ -6,9 +6,14 @@ import { Provider } from 'mobx-react'
 import * as serviceWorker from './serviceWorker';
 import {FilterStore as filterstore} from './stores/filterstore'
 import {DataStore as datastore} from './stores/datastore'
+import {SigninStore} from './stores/Signinstore'
+import {SignUpStore} from './stores/SignUpstore'
+
 const Filterstore=new filterstore()
 const Datastore=new datastore()
-const stores={Filterstore,Datastore}
+const Signinstore=new SigninStore()
+const SignUpstore=new SignUpStore()
+const stores={Filterstore,Datastore,Signinstore,SignUpstore}
 
 ReactDOM.render(<Provider {...stores} ><App /></Provider>, document.getElementById('root'));
 
