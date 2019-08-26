@@ -22,7 +22,7 @@ class Navbar extends Component {
                 <span><Link to='/' className='logo'>ShowsFinder</Link></span>
                 <i className={this.state.searchBar ? "fas fa-angle-double-up" : "fas fa-angle-double-down"} onClick={this.searchBar}></i>
                 <div className='NavLinks'>
-                    <div><Link to='/SignInUp' className='link'>Log In/Sign Up</Link></div>
+                    <div><Link to='/SignUp' className='link' >Log In/Sign Up</Link></div>
                 </div>
                 {this.state.searchBar ? <Search /> : null}
             </div>

@@ -9,7 +9,7 @@ import Show from './components/Show'
 import Search from './components/search'
 import ShowPage from './components/ShowPage';
 import Navbar from './components/Navbar';
-
+import SignUp from './components/SignUp'
 
 @inject("Filterstore", "Datastore")
 @observer
@@ -29,6 +29,7 @@ class App extends Component {
           <Navbar/>
           <div className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
           <Route path="/inform/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
+          <Route exact path="/SignUp" component={SignUp}></Route>
         </div>
       </Router>
     );
