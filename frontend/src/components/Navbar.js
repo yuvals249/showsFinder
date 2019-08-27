@@ -18,7 +18,7 @@ class Navbar extends Component {
                 <span onClick={this.loadData} ><Link to='/' className='logo'>ShowsFinder</Link></span>
                 <Search />
                 <div className='NavLinks'>
-                  {localStorage.getItem('name') ? <div><Link to='/Profile' className='link' >Hello {localStorage.getItem('name')}!</Link></div> : <div><Link to='/SignInUp' className='link' ><i class="fas fa-user"></i> Sign In</Link></div>}
+                  {localStorage.getItem('name') ? <div><Link to='/Profile' className='link' >Hello, {localStorage.getItem('name')}!</Link></div> : <div><Link to='/SignInUp' className='link' ><i class="fas fa-user"></i> Sign In</Link></div>}
                 </div>
             </div>
         )
