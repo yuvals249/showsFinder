@@ -2,6 +2,57 @@ body{
     background-color: #ecf0f1;
 }
 
+
+@media only screen and (max-width: 500px) {
+    .PorfileContainer {
+        font-family: Arimo;
+        background-color: #ecf0f1;
+        padding: 2vw;
+    }
+    
+    .profTitle{
+        font-size: 10vw;
+        margin-top: -1vw;
+    }
+    
+    .SecTitle{
+        font-size: 5vw;
+    }
+    
+    
+    .BookmarkContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 0.1vw solid grey;
+    }
+    
+    .PurchaseContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .logout{
+            width: 25vw;
+            height: 10vw;
+            border: none;
+            background-color: #077C91;
+            border-radius: 0.2vw;
+            font-size: 5vw;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .logout:hover{
+            background-color: rgb(13, 167, 194);
+        }
+
+        .logut:active{
+            background-color: #077C91;
+        }
+}
+
+
+@media only screen and (min-width: 700px) {
 .PorfileContainer {
     font-family: Arimo;
     background-color: #ecf0f1;
@@ -26,4 +77,24 @@ body{
 .PurchaseContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .logout{
+        width: 7vw;
+        height: 3vw;
+        border: none;
+        background-color: #077C91;
+        border-radius: 0.2vw;
+        font-size: 2vw;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .logout:hover{
+        background-color: rgb(13, 167, 194);
+    }
+
+    .logut:active{
+        background-color: #077C91;
+    }
 }
