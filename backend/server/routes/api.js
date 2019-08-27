@@ -5,7 +5,7 @@ const Show = require('../model/Show')
 const User = require('../model/User')
 const translate = require('translate');
 translate.engine = 'yandex';
-const apiKey = 'AIzaSyBrxb-nSV0JL1UtoxXtbLIHFuE4p3EnliY'
+const apiKey = 'AIzaSyCsiMgX17KlEQaJcxlshqgVQLYGgua4f5w'
 let axios = require('axios')
 const gis = require('g-i-s');
 const nodemailer = require('nodemailer');
@@ -89,9 +89,9 @@ router.put('/payment/:name/:tickets/:email', (req, res) => {
         let show = response
         sendEmail(show, 'purchaseConfirmation', email)
     })
-    User.find({ email: userEmail }, function (err, response) {
-        response.purchasedShows.push(name)
-        response.save()
+    User.find({ email: email }, function (err, response) {
+        response[0].purchasedShows.push(name)
+        response[0].save()
         res.end()
     })
 })
@@ -112,8 +112,8 @@ router.post('/filter', (req, res) => {
 //insert new user
 router.post('/newUser', (req, res) => {
     let user = req.body
-    user.bookmarks = null
-    user.purchasedShows = null
+    user.bookmarks = []
+    user.purchasedShows = []
     let newUser = new User(user)
     newUser.save()
     sendEmail(user, 'registration')
@@ -143,12 +143,28 @@ router.get('/userInfo/:email', (req, res) => {
 })
 
 //add show to bookmarks
-router.put('/userProfile/:name/:email', (req, res) => {
+router.put('/userProfileAdd/:name/:email', (req, res) => {
     let showName = req.params.name
     let userEmail = req.params.email
     User.find({ email: userEmail }, function (err, response) {
-        response.bookmarks.push(showName)
-        response.save()
+        response[0].bookmarks.push(showName)
+        // console.log(response[0])
+        response[0].save()
+    })
+    res.end()
+})
+
+//remove from bookmarks
+router.put('/userProfileRemove/:name/:email', (req, res) => {
+    let showName = req.params.name
+    let userEmail = req.params.email
+    User.find({ email: userEmail }, function (err, response) {
+        for (let i in response[0].bookmarks) {
+            if (response[0].bookmarks[i] === showName) {
+                response[0].bookmarks.splice(i, 1)
+                response[0].save()
+            }
+        }
         res.end()
     })
 })
