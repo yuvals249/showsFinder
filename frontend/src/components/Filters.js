@@ -49,7 +49,7 @@ class Filters extends Component {
         return (
             <div id='filterBox'>
                 <div className='filterNum'>{this.props.Filterstore.cost}{this.props.Datastore.shows[0].priceCurrencySign}</div>
-                <input type="range" name="cost" min="10" max="500" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='slider'/>
+                <input type="range" name="cost" min="10" max="200" onChange={this.handlefilters} value={this.props.Filterstore.cost} className='slider'/>
 
             <div className='dropDownBox'>               
                 <select name="location" onChange={this.handlefilters} value={this.props.Filterstore.location} className='dropFilterLoc' id='dropFilter' >

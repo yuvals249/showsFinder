@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react'
 import axios from 'axios'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import SignIn from './Signin'
+import { async } from 'q';
 @inject("SignUpstore")
 @observer
 class SignUp extends Component {
-    
+    constructor(){
+        super()
+        this.state={
+            validfilds:true
+        }
+    }
+
     handleinputs = (e) => {
 
         this.props.SignUpstore.handleinputs(e.target.name, e.target.value)
@@ -23,7 +30,7 @@ class SignUp extends Component {
         if(store.name!==""){
             checks.name=true
         }
-        if(store.email.includes('@')){
+        if(store.email.includes('@') && store.email.includes('.')){
             checks.email=true
         }
         if(store.password.length>=8){
@@ -35,7 +42,17 @@ class SignUp extends Component {
         return checks
     }
 
-  async  newuser () {
+    newuser=async ()=> {
+    let checks=  this.checkinputs()
+    let validfilds = true
+    for (let c in checks){
+        if(checks[c]===false){
+            validfilds=false
+        }
+    }
+
+    if(validfilds){
+        this.setState({validfilds:true})
       let newuser={
           name:this.props.SignUpstore.name,
           email:this.props.SignUpstore.email,
@@ -43,10 +60,14 @@ class SignUp extends Component {
       }
     let res= await axios.post(`http://localhost:8080`,newuser)
     return res
+  }else{
+      this.setState({validfilds:false})
   }
+}
     render (){
         return(
-            <div>
+            <div className='signup'>
+                <SignIn />
                <div>
                   name: <input type='text' name='name' onChange={this.handleinputs} placeholder='your name' ></input>
                   </div>
@@ -64,6 +85,8 @@ class SignUp extends Component {
                     </div>
                     {this.checkinputs().confirmpassword ? null : <div>confirm your password please</div>}
                     <button onClick={this.newuser} >SignUp</button>
+                    {this.state.validfilds===false ? <div>please enter all the requierd fields</div> : null }
+                    
             </div>
         )
     }
