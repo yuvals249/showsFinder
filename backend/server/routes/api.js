@@ -88,6 +88,10 @@ router.put('/payment/:name/:tickets/:email', (req, res) => {
     Show.findOneAndUpdate({ name: name }, { amountLeft: tickets - 1 }, { new: true }, function (err, response) {
         let show = response
         sendEmail(show, 'purchaseConfirmation', email)
+    })
+    User.find({ email: userEmail }, function (err, response) {
+        response.purchasedShows.push(name)
+        response.save()
         res.end()
     })
 })
@@ -138,6 +142,16 @@ router.get('/userInfo/:email', (req, res) => {
     })
 })
 
+router.put('/userProfile/:name/:email', (req, res) => {
+    let showName = req.params.name
+    let userEmail = req.params.email
+    User.find({ email: userEmail }, function (err, response) {
+        response.bookmarks.push(showName)
+        response.save()
+        res.end()
+    })
+})
+
 //send email function
 function sendEmail(obj, subject, email) {
     let transporter = nodemailer.createTransport({
@@ -181,6 +195,8 @@ function sendEmail(obj, subject, email) {
         });
     }
 }
+
+
 
 
 module.exports = router
