@@ -184,4 +184,21 @@
   padding-right: 2vw;
 } 
 
+.fa-bookmark{
+  position: absolute;
+  margin-left: 27.5vw;
+  margin-top: -14vw;
+  color: gold;
+  cursor: pointer;
+}
+
+.fa-bookmark:hover{
+  color: yellow;
+  transition: 0.3s;
+}
+
+.fa-bookmark:active{
+  color: gold;
+  transition: 0.3s;
+}
 }

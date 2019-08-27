@@ -142,6 +142,7 @@ router.get('/userInfo/:email', (req, res) => {
     })
 })
 
+//add show to bookmarks
 router.put('/userProfile/:name/:email', (req, res) => {
     let showName = req.params.name
     let userEmail = req.params.email
