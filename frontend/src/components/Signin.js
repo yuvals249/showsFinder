@@ -23,7 +23,7 @@ class SignIn extends Component {
     let password=this.props.Signinstore.password
     let res = await axios.get(`http://localhost:8080/user/${email}/${password}`)
     
-    if(res!==[]){
+    if(res.data.length>0){
     localStorage.setItem(`name`,res.data[0].name)
     localStorage.setItem(`email`,res.data[0].email)
     localStorage.setItem(`password`,res.data[0].password)

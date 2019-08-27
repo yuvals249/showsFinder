@@ -16,10 +16,11 @@ class ShowPage extends Component {
             alert("The payment was succeeded!", payment);
             
             let email=await localStorage.getItem('email')
-            await axios.put(`http://localhost:8080/payment/${this.props.show.name}/${this.props.show.amountLeft}/${email}`)
+          let user=  await axios.put(`http://localhost:8080/payment/${this.props.show.name}/${this.props.show.amountLeft}/${email}`)
             let data = await axios.get('http://localhost:8080')
             this.props.Datastore.getdata(data.data)
             this.props.Datastore.updateStore(data.data)
+            localStorage.setItem('keypurchasedShows', JSON.stringify(user.data.purchasedShows))
             // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
         }
 
@@ -59,7 +60,7 @@ class ShowPage extends Component {
                     <p className='showDescPage'>{show.description}</p>
                 </div>
                 <div className='showPageButton'>
-                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'ILS'} total={show.currentPrice} style={style} /></div>
+                    <div className='paypalPayBoxPage'>{localStorage.email ?<PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'ILS'} total={show.currentPrice} style={style} /> : 'Please Login In Order To Purchase'}</div>
                 </div>
             </div>
         )
