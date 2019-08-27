@@ -7,12 +7,7 @@ import axios from 'axios'
 @observer
 class ShowPage extends Component {
 
-    loadData = async () => {
-        let data = await axios.get('http://localhost:8080')
-        this.props.Datastore.getdata(data.data)
-        this.props.Datastore.updateStore(data.data)
-        window.location.href = "http://localhost:3000/";
-    }
+    
 
     render() {
 
