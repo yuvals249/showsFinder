@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios'
 
 @inject("Signinstore")
@@ -29,6 +30,8 @@ class SignIn extends Component {
     localStorage.setItem('purchasedShows', JSON.stringify(res.data[0].purchasedShows))
     localStorage.setItem('bookmarks', JSON.stringify(res.data[0].bookmarks))
     this.setState({ user: true })
+    window.location.reload()
+    window.location.href = "http://localhost:3000/"
     }
   }
   render() {
