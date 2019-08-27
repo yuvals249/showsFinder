@@ -19,7 +19,9 @@ class ShowPage extends Component {
         const onSuccess = async (payment) => {
             // Congratulation, it came here means everything's fine!
             alert("The payment was succeeded!", payment);
-            await axios.put(`http://localhost:8080/payment/${this.props.show.name}/${this.props.show.amountLeft}`)
+            
+            let email=await localStorage.getItem('email')
+            await axios.put(`http://localhost:8080/payment/${this.props.show.name}/${this.props.show.amountLeft}/${email}`)
             let data = await axios.get('http://localhost:8080')
             this.props.Datastore.getdata(data.data)
             this.props.Datastore.updateStore(data.data)
@@ -62,7 +64,7 @@ class ShowPage extends Component {
                     <p className='showDescPage'>{show.description}</p>
                 </div>
                 <div className='showPageButton'>
-                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} style={style} /></div>
+                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'ILS'} total={show.currentPrice} style={style} /></div>
                 </div>
             </div>
         )
