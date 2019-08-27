@@ -5,6 +5,7 @@ export class SignUpStore {
     @observable email = ""
     @observable password = ""
     @observable confirmpassword = ""
+
     @action handleinputs = (name, value) => {
         this[name] = value
     } 

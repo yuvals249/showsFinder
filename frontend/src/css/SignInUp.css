@@ -1,0 +1,65 @@
+@media only screen and (max-width: 500px) {}
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+
+.SignInUpContainer{
+    text-align:center;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    margin-top: 10vw;
+}
+
+.SignInContainer {
+    padding: 5vw;
+    margin-left: 6vw;
+    background-color: #E0E0E0; 
+    border-radius: 0.2vw;  
+    text-align: left;
+    height:20vw;
+}
+
+.signup{
+    padding: 5vw;
+    background-color: #E0E0E0; 
+    border-radius: 0.2vw;
+    text-align: left;
+    height:20vw;
+  }
+
+  .SignBtn{
+      width: 100%;
+      height: 2vw;
+      border: none;
+      background-color: #077C91;
+      border-radius: 0.2vw;
+      font-size: 1.5vw;
+      transition: 0.3s;
+  }
+}
+
+.SignBtn:hover{
+    background-color: rgb(13, 167, 194);
+}
+
+.SignBtn:active{
+    background-color: #077C91;
+}
+
+.fieldTitle {
+    font-size: 1.5vw;
+}
+
+.SignInputs {
+    height: 1.3vw;
+    border:none;
+}
+
+.SignInputs::placeholder{
+    color:grey;
+}
+
+.error {
+    color: red;
+    font-size: 1vw;
+}
