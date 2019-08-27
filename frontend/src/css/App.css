@@ -38,16 +38,6 @@ body {
   font-size: 3.5vw;
   }
   
-  .NavLinks div:hover {
-    background-color: #2CA6D6;
-    transition: 0.3s;
-  }
-  
-  .NavLinks div:active {
-    background-color: rgb(30, 97, 124);
-    transition: 0.3s;
-  }
-  
   #nav-bar span {
     font-weight: bold;
     margin-left: 1% ;
@@ -75,6 +65,11 @@ body {
     color:white;
     text-decoration: none;
     text-align: center;
+    }
+
+  .link:hover {
+      color: #2CA6D6;
+      transition: 0.3s;
     }
   
       .search {
@@ -265,16 +260,6 @@ padding-top: 0.5vh;
 font-size: 1.5vw;
 }
 
-.NavLinks div:hover {
-  background-color: #2CA6D6;
-  transition: 0.3s;
-}
-
-.NavLinks div:active {
-  background-color: rgb(30, 97, 124);
-  transition: 0.3s;
-}
-
 #nav-bar span {
   font-weight: bold;
   margin-left: 1% ;
@@ -289,19 +274,20 @@ font-size: 1.5vw;
 
 .logo:hover {
   border-radius: 1vw;
-  background-color: #2CA6D6;
+  color: #2CA6D6;
   transition: 0.3s;
 }
 
-.logo:active {
-  border-radius: 1vw;
-  background-color: rgb(30, 97, 124);
-}
 
 .link {
   color:white;
   text-decoration: none;
   text-align: center;
+  }
+
+  .link:hover {
+    color: #2CA6D6;
+    transition: 0.3s;
   }
 
     .search {
@@ -457,9 +443,5 @@ font-size: 1.5vw;
       
       .fa-chevron-up:active {
         background-color:#37819B;
-      }
-
-      .signup{
-        padding: 5vw;
       }
     }

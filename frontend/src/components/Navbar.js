@@ -11,7 +11,7 @@ class Navbar extends Component {
                 <span><Link to='/' className='logo'>ShowsFinder</Link></span>
                 <Search />
                 <div className='NavLinks'>
-                    <div><Link to='/SignUp' className='link' >Log In/Sign Up</Link></div>
+                    <div><Link to='/SignInUp' className='link' ><i class="fas fa-user"></i> Sign In</Link></div>
                 </div>
             </div>
         )

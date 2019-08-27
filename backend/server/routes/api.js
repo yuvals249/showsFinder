@@ -2,11 +2,13 @@ const express = require('express')
 const router = express.Router()
 const request = require('request-promise')
 const Show = require('../model/Show')
+const User = require('../model/User')
 const translate = require('translate');
 translate.engine = 'yandex';
 const apiKey = 'AIzaSyBrxb-nSV0JL1UtoxXtbLIHFuE4p3EnliY'
 let axios = require('axios')
-var gis = require('g-i-s');
+const gis = require('g-i-s');
+const nodemailer = require('nodemailer');
 
 
 async function filterDataBeforeInsert() {
@@ -78,11 +80,19 @@ router.get('/', (req, res) => {
     })
 })
 
-router.put('/payment/:name/:tickets', (req, res) => {
+// purchase confirmation
+router.put('/payment/:name/:tickets/:email', (req, res) => {
     let name = req.params.name
     let tickets = req.params.tickets
+    let email = req.params.email
     Show.findOneAndUpdate({ name: name }, { amountLeft: tickets - 1 }, { new: true }, function (err, response) {
-        return
+        let show = response
+        sendEmail(show, 'purchaseConfirmation', email)
+    })
+    User.find({ email: userEmail }, function (err, response) {
+        response.purchasedShows.push(name)
+        response.save()
+        res.end()
     })
 })
 
@@ -95,6 +105,98 @@ router.post('/filter', (req, res) => {
         res.send(response)
     })
 })
+
+
+
+
+//insert new user
+router.post('/newUser', (req, res) => {
+    let user = req.body
+    user.bookmarks = null
+    user.purchasedShows = null
+    let newUser = new User(user)
+    newUser.save()
+    sendEmail(user, 'registration')
+    res.end()
+})
+
+//check if the user exist
+router.get('/user/:email/:password', (req, res) => {
+    let email = req.params.email
+    let password = req.params.password
+    User.find({ email: email, password: password }, function (err, response) {
+        if (response !== []) {
+            res.send(response)
+        }
+        else {
+            res.send(err)
+        }
+    })
+})
+
+//send user info 
+router.get('/userInfo/:email', (req, res) => {
+    let email = req.params.email
+    User.find({ email: email }, function (err, response) {
+        res.send(response)
+    })
+})
+
+router.put('/userProfile/:name/:email', (req, res) => {
+    let showName = req.params.name
+    let userEmail = req.params.email
+    User.find({ email: userEmail }, function (err, response) {
+        response.bookmarks.push(showName)
+        response.save()
+        res.end()
+    })
+})
+
+//send email function
+function sendEmail(obj, subject, email) {
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'showsfinder50@gmail.com',
+            pass: 'q1!w2@e3#'
+        }
+    });
+
+    if (subject === 'registration') {
+        let mailOptions = {
+            from: 'showsfinder50@gmail.com',
+            to: obj.email,
+            subject: 'Welcome to ShowsFinder!',
+            text: `Thank you for signing up for our website, ${obj.name}. We hope you find it usefull.
+                   Your password is: ${obj.password}`
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    }
+    else {
+        let mailOptions = {
+            from: 'showsfinder50@gmail.com',
+            to: email,
+            subject: 'Thank you for buying with our website, Enjoy the show!',
+            text: `Enjoy ${obj.name} at ${obj.address}.
+                   The show will start at ${obj.date}, ${obj.time1}`
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    }
+}
+
+
 
 
 module.exports = router

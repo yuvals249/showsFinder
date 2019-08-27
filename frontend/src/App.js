@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/App.css';
 import './css/Main.css';
 import './css/showPage.css';
+import './css/SignInUp.css';
 import './css/Profile.css'
 import { observer, inject } from 'mobx-react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -10,8 +11,8 @@ import Show from './components/Show'
 import Search from './components/search'
 import ShowPage from './components/ShowPage';
 import Navbar from './components/Navbar';
-import SignUp from './components/SignUp'
 import Profile from './components/Profile'
+import SignInUp from './components/SignInUp'
 
 @inject("Filterstore", "Datastore")
 @observer
@@ -31,7 +32,7 @@ class App extends Component {
           <Navbar/>
           <div className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
           <Route path="/inform/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
-          <Route exact path="/SignUp" component={SignUp}></Route>
+          <Route exact path="/SignInUp" component={SignInUp}></Route>
           <Route exact path="/Profile" component={Profile}></Route>
         </div>
       </Router>
