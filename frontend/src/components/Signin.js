@@ -18,10 +18,18 @@ class SignIn extends Component {
   }
 
   checkuser = async () => {
-    let res = await axios.get(`http://localhost:8080`)
-    localStorage.setItem('name', 'ahi')
+    let email=this.props.Signinstore.email
+    let password=this.props.Signinstore.password
+    let res = await axios.get(`http://localhost:8080/user/${email}/${password}`)
+    
+    if(res!==[]){
+    localStorage.setItem(`name`,res.data[0].name)
+    localStorage.setItem(`email`,res.data[0].email)
+    localStorage.setItem(`password`,res.data[0].password)
+    localStorage.setItem('purchasedShows', JSON.stringify(res.data[0].purchasedShows))
+    localStorage.setItem('bookmarks', JSON.stringify(res.data[0].bookmarks))
     this.setState({ user: true })
-    return res
+    }
   }
   render() {
     return (
@@ -37,7 +45,7 @@ class SignIn extends Component {
         </tr>
 
         <tr><td colspan="2"><button onClick={this.checkuser} className='SignBtn'>Login</button></td></tr>
-        <tr><td colspan="2">{this.state.user ? <div>welcome {localStorage.getItem('name')}</div> : null}</td></tr>
+        <tr><td colspan="2">{this.state.user ? <div>welcome {localStorage.getItem('name')}</div> : <div>enter a valid user</div>}</td></tr>
       </table>
     )
   }

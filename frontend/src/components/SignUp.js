@@ -60,7 +60,7 @@ class SignUp extends Component {
                 email: this.props.SignUpstore.email,
                 password: this.props.SignUpstore.password
             }
-            let res = await axios.post(`http://localhost:8080`, newuser)
+            let res = await axios.post(`http://localhost:8080/newUser`, newuser)
             return res
         } else {
             this.setState({ validfilds: false })
