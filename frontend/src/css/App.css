@@ -43,6 +43,7 @@ body {
     margin-left: 1% ;
     padding-top: 0.5vh;
     font-size: 5vw; 
+    margin-right: -1.5vw;
   }
   .logo {
     color:white;
@@ -83,6 +84,8 @@ body {
         margin-left: 32vw;
         z-index: 40000;
         border-radius: 2vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
       }
       
       .search::placeholder {
@@ -154,8 +157,8 @@ body {
       width: 40vw;
       height: 13vw;
       position: absolute;
-      margin-top: 5vw;
-      margin-left: 32vw;
+      margin-top: 4vw;
+      margin-left: 33vw;
       transition: 0.3s;
       border-bottom-left-radius: 0.5vw;
       border-bottom-right-radius: 0.5vw;
@@ -174,7 +177,7 @@ body {
       .fa-chevron-down {
         position: absolute;
         width: 10vw;
-        height: 5vw;
+        height: 5.1vw;
         background-color: rgb(142, 216, 243);
         font-size: 5vw;
         color:white;
@@ -182,6 +185,8 @@ body {
         margin-left: 63vw;
         z-index: 70000;
         border-radius: 3vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
       }
         
       .fa-chevron-down:hover {
@@ -196,7 +201,7 @@ body {
       .fa-chevron-up {
         position: absolute;
         width: 10vw;
-        height: 5vw;
+        height: 5.1vw;
         background-color: rgb(142, 216, 243);
         font-size: 5vw;
         color:white;
@@ -204,6 +209,8 @@ body {
         margin-left: 63vw;
         z-index: 70000;
         border-radius: 3vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
       }
       @keyframes fade {
         from {
@@ -387,7 +394,7 @@ font-size: 1.5vw;
     height: 8vw;
     position: absolute;
     margin-top: 2vw;
-    margin-left: 30vw;
+    margin-left: 30.5vw;
     transition: 0.3s;
     border-bottom-left-radius: 0.5vw;
     border-bottom-right-radius: 0.5vw;
@@ -404,7 +411,7 @@ font-size: 1.5vw;
     .fa-chevron-down {
       position: absolute;
       width: 5vw;
-      height: 2.2vw;
+      height: 2.1vw;
       background-color: rgb(142, 216, 243);
       font-size: 2.5vw;
       color:white;
@@ -427,7 +434,7 @@ font-size: 1.5vw;
       
     .fa-chevron-up {
       width: 5vw;
-      height: 2.2vw;
+      height: 2.1vw;
       background-color: rgb(142, 216, 243);
       font-size: 2.5vw;
       color:white;

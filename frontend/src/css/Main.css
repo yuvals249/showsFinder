@@ -81,8 +81,27 @@
     text-align: right;
     font-weight: bold;
     font-size: 1.3vw;   
-    padding-right: 2vw;
+    padding-right: 3vw;
   } 
+
+  .fa-bookmark{
+    position: absolute;
+    margin-left: 82vw;
+    margin-top: -22vw;
+    color: gold;
+    cursor: pointer;
+    font-size: 6vw;
+  }
+  
+  .fa-bookmark:hover{
+    color: yellow;
+    transition: 0.3s;
+  }
+  
+  .fa-bookmark:active{
+    color: gold;
+    transition: 0.3s;
+  }
     
 }
 
@@ -148,7 +167,7 @@
   margin-right: 100%;
   z-index: 1000;
   position: absolute;
-  line-height: 1.4vw;
+  line-height: 1.3vw;
 }
   
 .showPriceBuyNow:hover {
@@ -190,6 +209,7 @@
   margin-top: -14vw;
   color: gold;
   cursor: pointer;
+  font-size: 2vw;
 }
 
 .fa-bookmark:hover{
@@ -200,5 +220,5 @@
 .fa-bookmark:active{
   color: gold;
   transition: 0.3s;
-}
+  }
 }

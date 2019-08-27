@@ -48,7 +48,7 @@ class SignIn extends Component {
         </tr>
 
         <tr><td colspan="2"><button onClick={this.checkuser} className='SignBtn'>Login</button></td></tr>
-        <tr><td colspan="2">{this.state.user ? <div>welcome {localStorage.getItem('name')}</div> : <div>enter a valid user</div>}</td></tr>
+        <tr><td colspan="2">{this.state.user ? <div>welcome {localStorage.getItem('name')}</div> : <div className='error'>enter a valid user</div>}</td></tr>
       </table>
     )
   }

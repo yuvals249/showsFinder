@@ -1,5 +1,74 @@
-@media only screen and (max-width: 500px) {}
-
+@media only screen and (max-width: 500px) {
+    .SignInUpContainer{
+        text-align:center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 10vw;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .SignInContainer {
+        margin-top: 5vw;
+        margin-left: 10vw;
+        background-color: #E0E0E0; 
+        border-radius: 0.2vw;  
+        text-align: left;
+        height:40vw;
+        width: 80vw;
+    }
+    
+    .signup{
+        margin-top: 10vw;
+        margin-left: 3vw;
+        background-color: #E0E0E0; 
+        border-radius: 0.2vw;
+        text-align: left;
+        height:30vw;
+        width: 95vw;
+      }
+    
+      .SignBtn{
+          width: 100%;
+          height: 10vw;
+          border: none;
+          background-color: #077C91;
+          border-radius: 0.2vw;
+          font-size: 10w;
+          transition: 0.3s;
+      }
+    
+    
+    .SignBtn:hover{
+        background-color: rgb(13, 167, 194);
+    }
+    
+    .SignBtn:active{
+        background-color: #077C91;
+    }
+    
+    .fieldTitle {
+        font-size: 3vw;
+    }
+    
+    .SignInputs {
+        width: 100%;
+        height: 5vw;
+        border:none;
+    }
+    
+    .SignInputs::placeholder{
+        color:grey;
+        font-size: 4vw;
+        padding-left: 1vw;
+    }
+    
+    .error {
+        color: red;
+        font-size: 3vw;
+        text-align: center;
+    }
+}
   /* Desktop Styles */
   @media only screen and (min-width: 961px) {
 
@@ -36,7 +105,7 @@
       font-size: 1.5vw;
       transition: 0.3s;
   }
-}
+
 
 .SignBtn:hover{
     background-color: rgb(13, 167, 194);
@@ -57,9 +126,12 @@
 
 .SignInputs::placeholder{
     color:grey;
+    padding-left: 1vw;
 }
 
 .error {
     color: red;
     font-size: 1vw;
 }
+
+  }
