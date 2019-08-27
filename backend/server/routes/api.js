@@ -92,7 +92,7 @@ router.put('/payment/:name/:tickets/:email', (req, res) => {
     User.find({ email: email }, function (err, response) {
         response[0].purchasedShows.push(name)
         response[0].save()
-        res.end()
+        res.send(response[0].purchasedShows)
     })
 })
 
@@ -154,6 +154,7 @@ router.put('/userProfileAdd/:name/:email', (req, res) => {
     res.end()
 })
 
+
 //remove from bookmarks
 router.put('/userProfileRemove/:name/:email', (req, res) => {
     let showName = req.params.name
@@ -185,7 +186,7 @@ function sendEmail(obj, subject, email) {
             to: obj.email,
             subject: 'Welcome to ShowsFinder!',
             text: `Thank you for signing up for our website, ${obj.name}. We hope you find it usefull.
-                   Your password is: ${obj.password}`
+            Your password is: ${obj.password}`
         };
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
@@ -201,7 +202,7 @@ function sendEmail(obj, subject, email) {
             to: email,
             subject: 'Thank you for buying with our website, Enjoy the show!',
             text: `Enjoy ${obj.name} at ${obj.address}.
-                   The show will start at ${obj.date}, ${obj.time1}`
+            The show will start at ${obj.date}, ${obj.time1}`
         };
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
@@ -215,5 +216,22 @@ function sendEmail(obj, subject, email) {
 
 
 
+//get bookmarks array for each user
+// router.get('/myProfile/:email', (req, res) => {
+//     let email = req.params.email
+//     let bookmarksObj = {}
+//     User.find({ email: email }, function (err, response) {
+//         const bookmarks = response[0].bookmarks
+//         console.log(bookmarks)
+//         for (let i of bookmarks) {
+//             Show.find({name: 'באושר ועושר - שי אביבי ומיכל ליבדינסקי'}, function (err,showResponse) {
+//                 console.log(showResponse[0])
+//                 // bookmarksObj[showResponse[0].name] = showResponse[0]
+//                 // console.log(bookmarksObj)
+//             })
+//         }
+//         res.send(bookmarksObj)
+//     })
+// })
 
 module.exports = router

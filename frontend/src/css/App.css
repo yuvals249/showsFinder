@@ -262,14 +262,15 @@ font-size: 1.5vw;
 
 #nav-bar span {
   font-weight: bold;
-  margin-left: 1% ;
   padding-top: 0.5vh;
   font-size: 2.5vw; 
+  margin-right: -2vw;
 }
 .logo {
   color:white;
   text-decoration: none;
   text-align: center;
+  margin-left: 1vw;
 }
 
 .logo:hover {
@@ -302,6 +303,7 @@ font-size: 1.5vw;
       z-index: 40000;
       animation: fade 0.3s linear forwards;
       border-radius: 2vw;
+      padding-left: 1vw;
     }
 
     .search::placeholder {
@@ -402,15 +404,16 @@ font-size: 1.5vw;
     .fa-chevron-down {
       position: absolute;
       width: 5vw;
-      height: 2.1vw;
+      height: 2.2vw;
       background-color: rgb(142, 216, 243);
       font-size: 2.5vw;
       color:white;
       cursor: pointer;
-      margin-left: 65vw;
+      margin-left: 66vw;
       z-index: 70000;
       border-radius: 3vw;
       animation: fade 0.3s linear forwards;
+      
     }
       
     .fa-chevron-down:hover {
@@ -424,13 +427,13 @@ font-size: 1.5vw;
       
     .fa-chevron-up {
       width: 5vw;
-      height: 2.1vw;
+      height: 2.2vw;
       background-color: rgb(142, 216, 243);
       font-size: 2.5vw;
       color:white;
       cursor: pointer;
       position: absolute;
-      margin-left: 65vw;
+      margin-left: 66vw;
       z-index: 70000;
       border-radius: 3vw;
       animation: fade 0.3s linear forwards;
@@ -449,3 +452,4 @@ font-size: 1.5vw;
     .logout{
      margin-top: 3vw; 
     }
+  
