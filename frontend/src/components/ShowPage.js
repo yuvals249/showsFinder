@@ -62,7 +62,7 @@ class ShowPage extends Component {
                     <p className='showDescPage'>{show.description}</p>
                 </div>
                 <div className='showPageButton'>
-                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'USD'} total={show.currentPrice} style={style} /></div>
+                    <div className='paypalPayBoxPage'><PaypalExpressBtn onCancel={onCancel} onSuccess={onSuccess} client={client} currency={'ILS'} total={show.currentPrice} style={style} /></div>
                 </div>
             </div>
         )
