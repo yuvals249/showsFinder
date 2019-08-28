@@ -1,7 +1,8 @@
 import { observable, action } from  'mobx'
 
 export class SignUpStore {
-    @observable name = ""
+    @observable firstname = ""
+    @observable surename = ""
     @observable email = ""
     @observable password = ""
     @observable confirmpassword = ""
