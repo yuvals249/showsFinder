@@ -22,11 +22,11 @@ class Show extends Component {
         this.setState({bookmarks: !this.state.bookmarks}, function () {
             if (this.state.bookmarks) {
                 alert('Added to your bookmarks')
-                axios.put(`http://localhost:8080/userProfileAdd/${this.props.show.name}/${localStorage.getItem('email')}`)
+                axios.put(`/userProfileAdd/${this.props.show.name}/${localStorage.getItem('email')}`)
             }
             else {
                 alert('Removed from your bookmarks')
-                axios.put(`http://localhost:8080/userProfileRemove/${this.props.show.name}/${localStorage.getItem('email')}`)
+                axios.put(`/userProfileRemove/${this.props.show.name}/${localStorage.getItem('email')}`)
             }
         })
     }

@@ -37,7 +37,7 @@ class Filters extends Component {
             location: this.props.Filterstore.location,
             date: this.props.Filterstore.date
         }
-        let data=await axios.post(`http://localhost:8080/filter`,filters)
+        let data=await axios.post(`/filter`,filters)
         this.props.Datastore.updateStore(data.data)
         console.log(data.data)
     }

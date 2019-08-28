@@ -7,7 +7,7 @@ import Search from './search'
 @observer
 class Navbar extends Component {
     loadData = async () => {
-        let data = await axios.get('http://localhost:8080')
+        let data = await axios.get('/')
         this.props.Datastore.getdata(data.data)
         this.props.Datastore.updateStore(data.data)
     }

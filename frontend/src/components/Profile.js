@@ -5,7 +5,7 @@ class Profile extends Component {
     logout(){
         localStorage.clear()
         window.location.reload()
-        window.location.href = "http://localhost:3000/SignInUp"
+        window.location.href = "/SignInUp"
     }
 render() {
 return (
