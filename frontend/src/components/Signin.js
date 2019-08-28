@@ -21,7 +21,7 @@ class SignIn extends Component {
   checkuser = async () => {
     let email=this.props.Signinstore.email
     let password=this.props.Signinstore.password
-    let res = await axios.get(`http://localhost:8080/user/${email}/${password}`)
+    let res = await axios.get(`/user/${email}/${password}`)
     
     if(res.data.length>0){
     localStorage.setItem(`name`,res.data[0].name)
@@ -31,7 +31,7 @@ class SignIn extends Component {
     localStorage.setItem('bookmarks', JSON.stringify(res.data[0].bookmarks))
     this.setState({ user: true })
     window.location.reload()
-    window.location.href = "http://localhost:3000/"
+    window.location.href = "/"
     }else{
       this.setState({
         user:false
