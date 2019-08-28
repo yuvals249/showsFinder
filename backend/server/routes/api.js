@@ -5,7 +5,7 @@ const Show = require('../model/Show')
 const User = require('../model/User')
 const translate = require('translate');
 translate.engine = 'yandex';
-const apiKey = 'AIzaSyCsiMgX17KlEQaJcxlshqgVQLYGgua4f5w'
+const apiKey = 'AIzaSyCGWtIvgmg591qoFrD9purXMv9ShSQ1iAk'
 let axios = require('axios')
 const gis = require('g-i-s');
 const nodemailer = require('nodemailer');
@@ -17,6 +17,11 @@ async function filterDataBeforeInsert() {
             await i.remove()
         }
     })
+    // User.find({}, async function (err, response) {
+    //     for (let i of response) {
+    //         i.bookmarks = []
+    //     }
+    // })
     insertDataToDB().then(response => {
         Show.find({}, async function (error, res) {
             for (let j of res) {
@@ -51,6 +56,13 @@ async function filterDataBeforeInsert() {
                 }
             }
         })
+        // const showsArray = []
+        // Show.find({}, function (err, response) {
+        //     for (let i of response) {
+        //         let name = i.name
+        //         showsArray.push({[name]: false})
+        //     }
+        // })
     })
 }
 
