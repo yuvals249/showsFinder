@@ -459,4 +459,11 @@ font-size: 1.5vw;
     .logout{
      margin-top: 3vw; 
     }
-  
+
+    .pigeon{
+      text-align: center;
+      margin-top: 100px; 
+    }
+  .img{
+    width: 100%
+  }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react' 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Profile extends Component {
     logout(){
@@ -9,7 +10,7 @@ class Profile extends Component {
 render() {
 return (
 <div className='PorfileContainer'> 
-    <h1 className='profTitle'>My Profile</h1>
+    <Link to='/not-a-pigion'><h1 className='profTitle'>My Profile</h1></Link>
     <h2 className='SecTitle'>Bookmarked Shows:</h2>
     <div className='BookmarkContainer'>
 
